@@ -1,0 +1,68 @@
+
+.grave { display: none; }
+
+.pointOfInterest {filter: url(#dropshadow);}
+
+/* gradients */
+.gradStop { stop-opacity: 1; }
+#gradDirtStop0 { stop-color: var(--browndark); }
+#gradDirtStop100 { stop-color: var(--brownglare); }
+#gradPinesStop0 { stop-color: var(--greenshade); }
+#gradPinesStop100 { stop-color: var(--greenglare); }
+#gradTrunkStop0 { stop-color: var(--brownlightshade); }
+#gradTrunkStop100 { stop-color: var(--brownlightglare); }
+
+#dirt{ fill: url(#gradDirt); }
+#trunk{ fill: url(#gradTrunk); }
+.treePines{ fill: url(#gradPines); }
+/* patterns */
+/* these do nothing at the moment please fix */
+body {
+    --skyBot: url('/assets/firstMap/skyGreyBot.png');
+    --skyMid: url('/assets/firstMap/skyGreyMid.png');
+    --skyTop: url('/assets/firstMap/skyGreyTop.png');
+}
+
+.skyBot{ fill: url(#patSkyBot); }
+.skyMid{ fill: url(#patSkyMid); }
+.skyTop{ fill: url(#patSkyTop); }
+
+/* grey */
+
+#flamingoneEye {
+    fill: white;
+}
+
+.tileFace, .rockFace {
+    fill: var(--grey);
+}
+
+.tileGlare, .rockGlare, #headstoneEdge {
+    fill: var(--greyglare);
+}
+
+.tileShade, .rockShade, #headstoneFace, #torso {
+    fill: var(--greyshade);
+}
+
+/* brown */
+
+#graveDirt {
+    fill: var(--brownshade);
+}
+
+#dirtRoadSouth {
+    fill: var(--brownlight);
+}
+
+/* green */
+
+#treeBottomBack {
+    fill: var(--greenshade);
+}
+
+/* pink */
+
+#beakBottom, #beakTop {
+    fill: var(--pink);
+}

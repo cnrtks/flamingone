@@ -1,0 +1,158 @@
+{
+    "firstMap": [
+        {
+            "id": "dirtRoadSouth",
+            "standX": 200,
+            "standY": 200,
+            "descriptions": [
+                "This road road road rodadendrone. It leads south maybe."
+            ]
+        },
+        {
+            "id": "tree",
+            "standX": -110,
+            "standY": 50,
+            "descriptions": [
+                "It' a shingle tree. It's all by itshelf."
+            ]
+        },
+        {
+            "id": "grave",
+            "standX": 210,
+            "standY": 100,
+            "descriptions": [
+                "Here rests Unnamed Flamingone. Born to die."
+            ]
+        },
+        {
+            "id": "rock1All",
+            "standX": 550,
+            "standY": 180,
+            "descriptions": [
+                "It's just a rock; But there could be something behind it."
+            ]
+        },
+        {
+            "id": "rock2All",
+            "standX": 400,
+            "standY": 100,
+            "descriptions": [
+                "It's a rock. It rhymes with sock."
+            ]
+        },
+        {
+            "id": "rock3All",
+            "standX": 550,
+            "standY": 20,
+            "descriptions": [
+                "There is nothing particularly special about this rock."
+            ]
+        }
+    ],
+    "witchHouseMap": [
+        {
+            "id": "houseExtension",
+            "standX": 220,
+            "standY": 100,
+            "descriptions":[
+                "This part of the house looks new."
+            ]
+        },
+        {
+            "id": "window",
+            "standX": 220,
+            "standY": 100,
+            "descriptions":[
+                "That window is in an advanced stage of disrepair."
+            ]
+        },
+        {
+            "id": "peony",
+            "standX": 220,
+            "standY": 100,
+            "descriptions":[
+                "I wonder what the ants are doing right now."
+            ]
+        },
+        {
+            "id": "pottedPalm",
+            "standX": 220,
+            "standY": 100,
+            "descriptions":[
+                "It looks pretty dry, I'm not sure water can save it."
+            ]
+        },
+        {
+            "id": "houseMain",
+            "standX": 500,
+            "standY": 140,
+            "descriptions":[
+                "It's the nicest looking shack you have ever seen."
+            ]
+        },
+        {
+            "id": "stinkFlower",
+            "standX": 750,
+            "standY": 150,
+            "descriptions":[
+                "A destinct and terrible smell is eminating from this rather ugly looking plant; Perhaps it is structural."
+            ]
+        },
+        {
+            "id": "dandelion",
+            "standX": 500,
+            "standY": 140,
+            "descriptions": [
+                "That is one dandy lion, assuming dandy means 'not a'."
+            ]
+        },
+        {
+            "id": "palmTree",
+            "standX": 0,
+            "standY": 150,
+            "descriptions":[
+                "It's not wind swept, they just kinda grow like that"
+            ]
+        },
+        {
+            "id": "door",
+            "standX": 500,
+            "standY": 140,
+            "descriptions":[
+                "That is a door."
+            ]
+        },
+        {
+            "id": "keystone",
+            "standX": 500,
+            "standY": 140,
+            "descriptions":[
+                "This wooden doorframe has a keystone."
+            ]
+        },
+        {
+            "id": "doorHole",
+            "standX": 500,
+            "standY": 140,
+            "descriptions":[
+                "It's one of those, what do you call it? Doorhole!"
+            ]
+        },
+        {
+            "id": "daisy",
+            "standX": 500,
+            "standY": 140,
+            "descriptions":[
+                "This flower is growing on a keystone."
+            ]
+        },
+        {
+            "id": "walkway",
+            "standX": 500,
+            "standY": 140,
+            "descriptions":[
+                "These stones are warm."
+            ]
+        }
+    ]
+}

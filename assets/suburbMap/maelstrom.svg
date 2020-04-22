@@ -1,0 +1,18 @@
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"> -->
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" id="maelstrom" class="maelstrom" preserveAspectRatio="none" viewBox="0 0 1366 768"> -->
+    <g id="sky" class="sky">
+        <rect id="greyCloud" class="maelstrom" x="-102" y="-401" width="1570" height="1570" stroke="none"/>
+        <rect id="redCloud" class="maelstrom" x="-102" y="-401" width="1570" height="1570" stroke="none"/>
+    </g>
+    <defs>
+        <pattern id='patGreyCloud' x='0' y='0' width='1570' height='1570' patternUnits='userSpaceOnUse' >
+            <image xlink:href='/assets/suburbMap/greyCloud.png' x='0' y='0' width='1570' height='1570'/>
+        </pattern>
+        <pattern id='patRedCloud' x='0' y='0' width='1570' height='1570' patternUnits='userSpaceOnUse' >
+            <image xlink:href='/assets/suburbMap/redCloud.png' x='0' y='0' width='1570' height='1570'/>
+        </pattern>
+    </defs>
+<!-- </svg> -->

@@ -1,0 +1,76 @@
+/* grey */
+#houseExtInterior, #houseMainInterior, #doorDaisyStamen {
+    fill: black;
+}
+#deadPalm{
+    fill: #333;
+}
+#flamingoneEye {
+    fill: white;
+}
+#doorKeystoneFace{
+    fill: var(--grey);
+}
+#torso, #stonePath, #doorKeystoneEdges {
+    fill: var(--greyshade);
+}
+/* brown */
+.houseBoard, .doorframe, #volcano, #palmTrunk {
+    fill: var(--brown);
+}
+#palmBelt, #palmTop, #palmCorolla {
+    fill: var(--brownshade);
+}
+.houseFace {
+    fill: var(--brownlight);
+}
+.windowPane {
+    fill: var(--tan);
+}
+#plantPot {
+    fill: var(--cream);
+}
+/* red */
+#doorDasiyPetals {
+    fill: var(--red);
+}
+/* orange */
+
+/* yellow */
+#houseExtWindowFrame, #doorHoleFrame, #doorKnob, #doorKnobPlate {
+    fill: var(--gold);
+}
+#stinkFlowerPetalsBack, #stinkFlowerPetalsFront, #palmPistil {
+    fill: var(--yellow);
+}
+#stinkFlowerPetalsBottom, #doorDaisyPetals, #palmPistilEdges {
+    fill: var(--yellowshade);
+}
+/* green */
+#stinkFlowerCorolla, #vine {
+    fill: var(--greenshade);
+}
+#stinkFlowerLeafLeft, #stinkFlowerLeafRight{
+    fill: var(--greenglare)
+}
+#peonyStem, #doorDaisyStem, #dandelionCorolla {
+    fill: var(--green);
+}
+/* blue */
+#grassBack{
+    fill: var(--bluecedarshade);
+}
+#grassMiddle{
+    fill: var(--bluecedar);
+}
+#grassFront{
+    fill: var(--bluecedarglare);
+}
+/* pink */
+#beackBottom, #beakTop, #peonyPetalLeft, #peonyPetalRight {
+    fill: var(--pink);
+}
+#peonyPetalTop {
+    fill: var(--pinklight);
+}
+/* purple */

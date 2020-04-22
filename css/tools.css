@@ -1,0 +1,10 @@
+#hoeHandle{
+    fill: var(--brown);
+}
+#hoeBlade{
+    fill: var(--brownshade);
+}
+#hoeRope{
+    /* pattern instead */
+    fill: var(--tan); 
+}

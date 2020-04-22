@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Flamingone</title>
+  <link rel="stylesheet" type="text/css" href="css/flamingone.css">
+  <link rel="stylesheet" type="text/css" href="css/pallet1.css">
+  <link rel="stylesheet" type="text/css" href="css/guiMenus.css">
+  <link rel="stylesheet" type="text/css" href="css/tools.css">
+</head>
+
+<body oncontextmenu="return false">
+  <svg id="svgContainer" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter xmlns="http://www.w3.org/2000/svg" id="dropshadow" height="130%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+        <feOffset dx="2" dy="2" result="offsetblur" />
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.2" />
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+  <div id="toolContainer" class="menu"></div>
+  <div id="messageContainer" class="menu">
+    <img id="messageImg" width="250px" height="250px" />
+    <p id="messageP"></p>
+  </div>
+  <!-- jquery libraries -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <!-- gsap libraries -->
+  <script type="text/javascript" src="js/gsap-public/umd/gsap.js"></script>
+  <script type="text/javascript" src="js/gsap-public/umd/Draggable.js"></script>
+  <!-- classes -->
+  <script type="text/javascript" src="js/pointOfInterest.js"></script>
+  <script type="text/javascript" src="js/tool.js"></script>
+  <!-- controllers -->
+  <script type="text/javascript" src="js/guiMenus.js"></script>
+  <script type="text/javascript" src="js/mapNavigation.js"></script>
+  <script type="text/javascript" src="js/inventoryFunctions.js"></script>
+  <!-- flamingone -->
+  <script type="text/javascript" src="js/flamingone.js"></script>
+</body>
+
+</html>

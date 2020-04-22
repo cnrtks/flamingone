@@ -1,0 +1,11 @@
+{
+    "tools": [
+        {
+            "id": "woodenHoe",
+            "name": "Wooden Hoe",
+            "path": "/assets/inventory/tools/woodenHoe.svg",
+            "qty": 0,
+            "description": "It's a gardening tool made from wood."
+        }
+    ]
+}

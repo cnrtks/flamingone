@@ -1,0 +1,43 @@
+button:focus {
+    outline: none;
+}
+
+#toolContainer{
+    display: none;
+    border: solid green 13px;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+#messageImg{
+    display: none;
+}
+
+#messageContainer {
+    position: relative;
+    width: 50%;
+    /* min-width: 683px; */
+    border: solid black 5px;
+    display: none;
+    padding: 1em;
+    background-color: rgba(3, 3, 3, 0.3);
+    text-shadow: 3px 0px 1px #FFF, -3px 0px 1px #FFF, 0px -3px 1px #FFF, 0px 3px 1px #FFF;
+}
+
+#messageContainer, .ui-dialog-titlebar-close {
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.ui-dialog-titlebar-close {
+    right: -12em;
+    top: 2em;
+    width: 2em;
+    height: 2em;
+    padding: 1px;
+    border: none;
+
+    background-color: #C56;
+}

@@ -1,0 +1,36 @@
+/* patterns */
+#redCloud{
+    fill: url(#patRedCloud);
+}
+#greyCloud{
+    fill: url(#patGreyCloud);
+}
+
+/* colors */
+#houseHindFace {
+    fill: var(--browndark);
+}
+
+#houseMidFace {
+    fill: var(--brown);
+}
+
+#houseTopFace {
+    fill: var(--brown);
+}
+
+#houseForeFace {
+    fill: var(--brownlight);
+}
+
+#houseTurretFace {
+    fill: var(--brownlight);
+}
+
+#houseFirstEaves, #houseSecondEaves {
+    fill: var(--cream);
+}
+
+.roof {
+    fill: var(--grey);
+}
