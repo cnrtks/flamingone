@@ -1,7 +1,8 @@
 
 .grave { display: none; }
 
-.pointOfInterest {filter: url(#dropshadow);}
+/*FIXME: remove or fix dropshadow*/
+/* .pointOfInterest {filter: url(#dropshadow);} */
 
 /* gradients */
 .gradStop { stop-opacity: 1; }

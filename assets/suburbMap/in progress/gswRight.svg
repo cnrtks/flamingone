@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="10in" height="5.53333in"
+     viewBox="0 0 900 498">
+  <path id="gasStationWindowRight" class="glass window" d="M 246.33,326.67
+           C 261.33,336.00 270.33,346.00 271.00,355.33
+             271.00,355.33 271.33,396.67 271.33,396.67
+             271.33,396.67 243.00,396.67 243.00,396.67
+             243.00,396.67 240.00,331.67 240.00,331.67
+             240.00,331.67 239.67,324.33 246.33,326.67 Z" />
+</svg>

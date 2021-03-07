@@ -32,6 +32,7 @@ loadMap = function (map) {
 }
 
 if (saveFile == null) {
-  // loadMap("firstMap");
-  loadMap("suburbMap")
+  loadMap("firstMap");
+  // loadMap("suburbMapUseDefs");
+  // loadMap("suburbMap");
 }

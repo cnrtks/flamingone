@@ -13,17 +13,6 @@
 <body oncontextmenu="return false">
   <svg id="svgContainer" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <filter xmlns="http://www.w3.org/2000/svg" id="dropshadow" height="130%">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-        <feOffset dx="2" dy="2" result="offsetblur" />
-        <feComponentTransfer>
-          <feFuncA type="linear" slope="0.2" />
-        </feComponentTransfer>
-        <feMerge>
-          <feMergeNode />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
     </defs>
   </svg>
   <div id="toolContainer" class="menu"></div>
@@ -37,6 +26,12 @@
   <!-- gsap libraries -->
   <script type="text/javascript" src="js/gsap-public/umd/gsap.js"></script>
   <script type="text/javascript" src="js/gsap-public/umd/Draggable.js"></script>
+  <!-- d3 libraries -->
+  <script type="text/javascript" src="js/d3/d3.js"></script>
+  <script type="text/javascript" src="js/d3/d3-queue.js"></script>
+  <!-- my libraries -->
+  <script type="text/javascript" src="js/svgGeneric.js"></script>
+  <script type="text/javascript" src="js/parallaxSVG.js"></script>
   <!-- classes -->
   <script type="text/javascript" src="js/pointOfInterest.js"></script>
   <script type="text/javascript" src="js/tool.js"></script>

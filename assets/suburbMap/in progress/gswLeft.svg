@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="10in" height="5.53333in"
+     viewBox="0 0 900 498">
+  <path id="gasStationWindowLeft"
+        fill="none" stroke="black" stroke-width="1"
+        d="M 155.25,406.88
+           C 155.25,406.88 101.62,416.75 101.62,416.75
+             101.62,416.75 97.88,348.50 97.88,348.50
+             97.88,348.50 162.75,335.38 162.75,335.38
+             162.75,335.38 155.25,406.88 155.25,406.88 Z" />
+</svg>

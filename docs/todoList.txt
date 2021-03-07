@@ -1,0 +1,20 @@
+suburbs
+path fixing:
+    add house alt paths
+    house: flag, car, mailbox, tree/roses, shrubbery
+    fix front fence
+    fix back wood fence
+    university stairs
+    gradients
+    maelstrom particles flying into it
+    maelstrom lightning
+    mask for warehouse pipes
+    fix house alignment issues (lawns can maybe just be huge rects once everything is where it needs to be, just like roads)
+    refine alignment of institues and house blocks and roads n shit
+    road pattern
+    clock pattern
+    office signs patterns
+    walk cycle
+    dragger width to actual size
+    fix dragger position (eliminate scroll bar)
+    make better back house paths

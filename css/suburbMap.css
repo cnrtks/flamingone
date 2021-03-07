@@ -1,12 +1,45 @@
 /* patterns */
-#redCloud{
+
+#redCloud {
     fill: url(#patRedCloud);
 }
-#greyCloud{
+
+#greyCloud {
     fill: url(#patGreyCloud);
 }
 
+/* gradients */
+
+.gradStop {
+    stop-opacity: 1;
+}
+
+#gradGrassStop0 {
+    stop-color: var(--greenshade);
+}
+
+#gradGrassStop100 {
+    stop-color: var(--green);
+}
+
+#grass {
+    fill: url(#gradGrass);
+}
+
 /* colors */
+
+#road, .gasHose {
+    fill: var(--grey3);
+}
+
+#gasStationGround{
+    fill: var(--grey9);
+}
+
+#gasStationGroundDark{
+    fill: var(--grey6);
+}
+
 #houseHindFace {
     fill: var(--browndark);
 }
@@ -27,10 +60,28 @@
     fill: var(--brownlight);
 }
 
-#houseFirstEaves, #houseSecondEaves {
+.teeth, #houseFirstEaves, #houseSecondEaves {
     fill: var(--cream);
 }
 
 .roof {
     fill: var(--grey);
+}
+
+/* red */
+
+#hoodFront, #hoodRight{
+    fill: var(--red);
+}
+
+#hoodUnder{
+    fill: var(--reddark);
+}
+
+#tongue {
+    fill: var(--pink);
+}
+
+#tongueBack {
+    fill: var(--pinkdark);
 }
