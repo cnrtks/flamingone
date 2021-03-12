@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 
-<svg xmlns="http://www.w3.org/2000/svg" id="flamingoneMap" class="flamingoneMap" preserveAspectRatio="none" viewBox="0 0 1024 768">
+<svg xmlns="http://www.w3.org/2000/svg" id="flamingoneMap" class="flamingoneMap" preserveAspectRatio="none"
+  viewBox="0 0 1024 768">
 
   <g id="sky" class="sky">
-    <rect id="skyBot" class="sky skyBot" x="0" y="0" width="1024" height="768" stroke="none"/>
-    <rect id="skyBotRight" class="sky skyBot" x="1023" y="0" width="1024" height="768" stroke="none"/>
-    <rect id="skyMid" class="sky skyMid" x="0" y="0" width="1024" height="768" stroke="none"/>
-    <rect id="skyMidRight" class="sky skyMid" x="1023" y="0" width="1024" height="768" stroke="none"/>
-    <rect id="skyTop" class="sky skyTop" x="0" y="0" width="1024" height="768" stroke="none"/>
-    <rect id="skyTopRight" class="sky skyTop" x="1023" y="0" width="1024" height="768" stroke="none"/>
+    <rect id="skyBot" class="sky skyBot" x="0" y="0" width="1024" height="768" stroke="none" />
+    <rect id="skyBotRight" class="sky skyBot" x="1023" y="0" width="1024" height="768" stroke="none" />
+    <rect id="skyMid" class="sky skyMid" x="0" y="0" width="1024" height="768" stroke="none" />
+    <rect id="skyMidRight" class="sky skyMid" x="1023" y="0" width="1024" height="768" stroke="none" />
+    <rect id="skyTop" class="sky skyTop" x="0" y="0" width="1024" height="768" stroke="none" />
+    <rect id="skyTopRight" class="sky skyTop" x="1023" y="0" width="1024" height="768" stroke="none" />
   </g>
 
   <path id="dirt" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 654.00,343.09
@@ -140,7 +140,8 @@
              656.18,348.55 660.78,346.21 663.09,344.55
              664.20,343.75 664.00,342.91 664.00,342.91
     664.00,342.91 658.63,343.18 654.00,343.09 Z" />
-  <path id="dirtRoadSouth" class="pointOfInterest" fill="none" stroke="black" vector-effect="non-scaling-stroke" stroke-width="1" d="M 374.33,750.00
+  <path id="dirtRoadSouth" class="pointOfInterest" fill="none" stroke="black" vector-effect="non-scaling-stroke"
+    stroke-width="1" d="M 374.33,750.00
            C 382.00,746.67 399.33,735.67 404.00,735.67
              409.67,732.33 411.00,725.67 418.00,723.33
              418.00,723.33 421.67,720.00 422.00,714.67
@@ -222,6 +223,10 @@
              621.00,754.67 618.33,755.00 618.33,755.00
              618.33,755.00 612.33,752.33 610.00,750.00
              609.33,749.67 607.67,744.67 609.67,742.33 Z" />
+  <path id="dirtRoadEast" fill="brown" class="pointOfInterest" stroke="black" stroke-width="1" d="M 1075.00,641.00
+           C 1075.00,641.00 951.00,550.00 951.00,550.00
+             951.00,550.00 1074.00,525.00 1074.00,525.00
+             1074.00,525.00 1075.00,641.00 1075.00,641.00 Z" />
   <g id="tree" class="pointOfInterest">
     <path id="treeBottomBack" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 72.55,315.45
           C 72.55,315.45 83.82,297.45 83.82,297.45
@@ -371,7 +376,8 @@
              100.50,484.62 90.25,483.62 87.50,488.00
              86.25,489.75 80.00,487.00 80.00,487.00
             80.00,487.00 69.38,487.50 64.88,489.75 Z" />
-    <path id="treeBottomFront" class="tree treePines" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 74.36,364.00
+    <path id="treeBottomFront" class="tree treePines" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 74.36,364.00
           C 71.11,368.09 66.09,371.69 62.91,373.09
             62.91,373.09 63.12,363.87 65.64,352.00
             71.27,337.45 73.50,322.53 72.55,315.45
@@ -405,7 +411,8 @@
             79.88,367.54 82.48,364.03 83.45,359.82
             84.86,353.70 84.36,346.55 84.36,346.55
             81.88,350.86 78.91,357.09 74.36,364.00 Z" />
-    <path id="treeMiddle" class="tree treePines" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 57.45,334.18
+    <path id="treeMiddle" class="tree treePines" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 57.45,334.18
            C 57.64,334.91 58.28,329.13 58.00,328.73
              57.27,326.00 65.82,310.00 67.64,306.91
              67.64,306.91 69.45,300.36 69.45,300.36
@@ -439,7 +446,8 @@
              76.55,330.55 80.00,317.09 78.91,313.27
              76.91,317.82 70.00,327.09 65.09,329.64
             61.78,331.13 62.36,333.45 57.45,334.18 Z" />
-    <path id="treeTop" class="tree treePines" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 98.91,194.00
+    <path id="treeTop" class="tree treePines" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 98.91,194.00
                 C 98.62,190.19 97.00,185.25 98.91,184.36
                   99.81,185.83 100.18,189.09 101.64,192.18
                   104.36,195.45 104.55,196.73 105.64,197.82
@@ -468,20 +476,23 @@
                   94.36,203.45 98.00,199.45 98.00,199.45
             98.63,198.70 99.06,196.02 98.91,194.00 Z" />
     <g id="tileRightLeftAll">
-      <path id="tileRightLeft" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 125.09,324.00
+      <path id="tileRightLeft" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 125.09,324.00
                      C 130.73,324.91 136.14,326.51 137.45,328.00
                        138.00,322.91 142.55,313.82 145.27,309.82
                        145.27,309.82 122.73,300.36 122.55,300.55
                        122.36,300.73 120.73,312.73 116.36,317.82
                        117.45,320.00 119.09,322.55 125.09,324.00 Z" />
-      <path id="tileRightLeftGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="
+      <path id="tileRightLeftGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="
                      M 135.09,318.36
                      C 135.09,318.36 138.18,315.45 139.27,312.36
                        138.91,309.45 134.18,307.09 130.18,305.82
                        130.18,305.82 130.82,307.39 131.64,308.18
                        132.75,309.27 134.27,309.73 135.64,310.36
                        137.09,312.73 136.73,313.45 135.09,318.36 Z" />
-      <path id="tileRightLeftShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="
+      <path id="tileRightLeftShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="
                      M 121.27,314.36
                      C 121.27,314.36 120.91,316.91 120.91,318.00
                        121.27,319.09 122.18,321.09 122.73,320.91
@@ -489,7 +500,8 @@
             118.73,316.91 121.27,314.36 121.27,314.36 Z" />
     </g>
     <g id="tileRightRightAll">
-      <path id="tileRightRight" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 143.27,306.91
+      <path id="tileRightRight" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 143.27,306.91
            C 143.64,301.09 142.91,298.36 144.73,296.00
              146.20,296.00 151.09,297.27 154.91,298.36
              159.71,300.36 164.31,303.57 164.36,303.64
@@ -497,13 +509,15 @@
              153.45,324.91 151.11,321.50 148.00,320.18
              143.54,318.30 137.82,318.29 137.82,318.18
              137.82,318.07 141.09,313.07 143.27,306.91 Z" />
-      <path id="tileRightRightShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="
+      <path id="tileRightRightShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke"
+        stroke="black" stroke-width="1" d="
            M 146.36,314.91
            C 147.15,315.82 146.45,316.27 147.09,316.91
              147.09,316.91 144.36,316.91 142.91,316.18
              142.55,315.09 142.91,312.18 142.91,312.18
              142.91,312.18 144.36,314.36 146.36,314.91 Z" />
-      <path id="tileRightRightGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="
+      <path id="tileRightRightGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke"
+        stroke="black" stroke-width="1" d="
            M 157.00,311.45
            C 156.71,311.60 156.17,311.46 155.82,311.64
              155.82,310.00 157.64,308.00 157.64,308.00
@@ -518,14 +532,16 @@
     </g>
     <!-- tileRighTopWasHere -->
     <g id="tileLeftLeftAll">
-      <path id="tileLeftLeftGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 77.27,286.45
+      <path id="tileLeftLeftGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 77.27,286.45
                 C 77.31,286.14 78.15,285.95 78.73,286.27
                   79.47,286.68 79.55,287.82 80.64,287.64
                   81.29,287.26 81.56,286.49 82.09,286.18
                   83.00,286.00 83.28,286.13 83.73,285.91
                   83.45,287.27 82.00,288.18 81.09,289.09
                 79.73,288.91 78.36,288.64 77.27,286.45 Z" />
-      <path id="tileLeftLeft" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 75.27,282.36
+      <path id="tileLeftLeft" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 75.27,282.36
                 C 75.09,279.64 75.45,277.67 75.45,276.55
                   75.45,276.55 88.73,281.09 88.73,281.09
                   88.73,281.09 88.00,285.27 88.00,285.27
@@ -534,7 +550,8 @@
                   80.91,290.18 74.73,290.73 73.09,290.36
                   73.45,288.73 73.73,286.45 73.82,285.27
                 74.36,284.64 74.86,284.37 75.27,282.36 Z" />
-      <path id="tileLeftLeftShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 83.27,282.36
+      <path id="tileLeftLeftShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 83.27,282.36
                 C 83.45,283.45 83.77,284.05 82.36,285.09
                   83.27,285.55 84.27,284.91 84.82,284.82
                   85.55,283.73 84.64,281.73 84.64,281.73
@@ -543,13 +560,15 @@
                 80.82,281.55 82.53,281.74 83.27,282.36 Z" />
     </g>
     <g id="tileLeftRightAll">
-      <path id="tileLeftRight" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 87.64,268.18
+      <path id="tileLeftRight" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 87.64,268.18
            C 90.36,269.45 99.45,275.27 100.73,277.09
              100.24,278.72 100.18,281.64 98.36,286.00
              98.06,286.46 95.98,285.49 95.64,286.00
              93.82,286.00 83.09,283.09 81.64,281.64
              82.91,279.45 87.64,270.36 87.64,268.18 Z" />
-      <path id="tileLeftRightShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 86.64,279.27
+      <path id="tileLeftRightShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 86.64,279.27
            C 88.09,280.27 89.91,281.00 90.73,282.09
              92.00,283.09 93.18,283.36 94.27,283.36
              95.00,283.27 95.73,282.73 96.27,282.18
@@ -559,7 +578,8 @@
              93.82,281.36 92.09,280.73 91.45,280.18
              91.45,280.18 89.91,279.18 89.55,279.18
              89.18,279.18 88.36,278.64 86.64,279.27 Z" />
-      <path id="tileLeftRightGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 92.82,275.27
+      <path id="tileLeftRightGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 92.82,275.27
            C 92.25,274.56 93.18,275.73 93.27,274.55
              94.09,274.09 96.64,275.27 97.18,276.36
              97.73,277.27 96.27,277.45 95.64,278.27
@@ -567,14 +587,16 @@
             94.82,275.64 93.47,276.10 92.82,275.27 Z" />
     </g>
     <g id="tileLeftTopAll">
-      <path id="tileLeftTop" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 70.00,268.18
+      <path id="tileLeftTop" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 70.00,268.18
                 C 72.36,263.64 72.47,260.87 72.73,258.73
                   72.73,258.73 75.45,260.00 78.91,261.64
                   82.55,265.09 86.91,268.08 87.82,269.09
                   86.73,271.45 83.27,277.45 82.55,282.36
                   80.00,280.73 75.27,277.64 70.73,275.45
                   69.82,274.55 69.09,270.00 70.00,268.18 Z" />
-      <path id="tileLeftTopShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 81.91,270.64
+      <path id="tileLeftTopShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 81.91,270.64
                 C 81.97,270.33 82.14,269.84 82.55,269.73
                   82.74,269.67 84.27,270.00 83.36,269.91
                   83.36,269.91 84.00,270.36 84.18,271.45
@@ -590,7 +612,8 @@
                   77.55,273.82 79.27,275.82 79.36,275.82
                   79.45,275.82 80.82,273.55 80.82,273.55
                   80.82,273.55 81.00,271.64 81.91,270.64 Z" />
-      <path id="tileLeftTopGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 80.82,269.00
+      <path id="tileLeftTopGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+        stroke-width="1" d="M 80.82,269.00
                 C 81.55,269.27 82.82,268.45 82.91,268.00
                   82.91,268.00 82.86,267.58 82.73,267.45
                   82.19,266.94 80.64,265.64 80.82,266.00
@@ -600,7 +623,8 @@
     </g>
   </g>
   <g id="tileRightTopAll">
-    <path id="tileRightTop" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 132.18,280.18
+    <path id="tileRightTop" class="tile tileFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 132.18,280.18
            C 133.39,276.96 133.42,275.98 133.82,274.73
              133.82,274.73 135.27,277.82 135.27,277.82
              135.27,277.82 139.71,277.85 143.64,278.73
@@ -609,7 +633,8 @@
              150.55,293.64 145.85,306.85 143.09,310.00
              142.91,310.00 128.36,303.27 123.27,302.55
                 124.18,295.09 127.27,288.36 132.18,280.18 Z" />
-    <path id="tileRightTopGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="
+    <path id="tileRightTopGlare" class="tile tileGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="
            M 138.27,283.00
            C 137.13,282.32 137.09,281.00 137.09,281.00
              137.09,281.00 140.45,281.82 141.64,283.00
@@ -621,7 +646,8 @@
              146.91,287.18 147.27,287.00 147.09,286.09
              146.36,286.00 144.36,285.36 143.36,284.73
                 142.09,284.36 140.10,284.09 138.27,283.00 Z" />
-    <path id="tileRightTopShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="
+    <path id="tileRightTopShade" class="tile tileShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="
            M 130.00,294.09
            C 130.82,293.64 129.64,292.55 128.91,292.91
              127.45,293.36 126.45,295.09 125.82,296.36
@@ -633,14 +659,16 @@
                 128.45,296.64 128.64,294.73 130.00,294.09 Z" />
   </g>
   <g id="grave" class="pointOfInterest">
-    <path id="headstoneEdge" class="grave headstone" vector-effect="non-scaling-stroke" fill="none" stroke="black" stroke-width="1" d="M 610.33,441.67
+    <path id="headstoneEdge" class="grave headstone" vector-effect="non-scaling-stroke" fill="none" stroke="black"
+      stroke-width="1" d="M 610.33,441.67
            C 610.33,441.67 636.33,444.00 651.00,443.33
              651.00,435.00 650.90,417.55 650.33,416.33
              649.00,409.67 649.67,410.00 647.00,402.67
              644.51,399.82 640.00,395.33 632.67,397.00
              626.51,396.99 617.47,397.89 614.67,398.67
              607.00,401.33 608.33,425.00 610.33,441.67 Z" />
-    <path id="headstoneFace" class="grave headstone" vector-effect="non-scaling-stroke" fill="none" stroke="black" stroke-width="1" d="M 606.33,437.67
+    <path id="headstoneFace" class="grave headstone" vector-effect="non-scaling-stroke" fill="none" stroke="black"
+      stroke-width="1" d="M 606.33,437.67
            C 605.62,432.51 605.33,425.33 607.00,416.67
              607.44,406.69 608.06,398.05 615.67,399.00
              615.67,399.00 624.67,400.00 632.67,399.00
@@ -648,7 +676,8 @@
              646.33,421.00 646.67,429.33 646.67,429.33
              646.67,429.33 646.67,439.67 646.67,439.67
              646.67,439.67 606.33,441.00 606.33,437.67 Z" />
-    <path id="headStoneCrossWings" class="grave headstone" vector-effect="non-scaling-stroke" fill="none" stroke="black" stroke-width="1" d="M 617.25,410.88
+    <path id="headStoneCrossWings" class="grave headstone" vector-effect="non-scaling-stroke" fill="none" stroke="black"
+      stroke-width="1" d="M 617.25,410.88
            C 617.25,410.88 614.75,413.12 615.12,415.00M 634.00,411.00
            C 634.00,411.00 636.38,414.50 636.00,416.88M 624.62,406.25
            C 624.62,406.25 625.00,423.38 625.00,423.38M 621.00,413.33
@@ -683,7 +712,8 @@
              605.00,454.67 601.67,455.67 600.33,456.33" />
   </g>
   <g id="rock1All" class="pointOfInterest">
-    <path id="rock1" class="rock rockFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 931.12,741.50
+    <path id="rock1" class="rock rockFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 931.12,741.50
                C 924.18,740.98 918.62,742.75 913.67,742.33
                  912.30,742.42 905.98,739.66 899.25,737.12
                  892.85,734.71 886.03,732.54 884.62,731.75
@@ -727,7 +757,8 @@
                  975.33,744.67 962.67,749.67 955.33,745.67
                  951.33,742.67 938.38,744.21 935.38,742.88
             934.54,742.73 932.32,741.59 931.12,741.50 Z" />
-    <path id="rock1Shade" class="rock rockShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 970.75,722.00
+    <path id="rock1Shade" class="rock rockShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 970.75,722.00
            C 963.73,723.31 953.16,722.36 945.25,722.25
              943.54,722.49 937.85,719.51 931.75,718.25
              925.39,716.94 918.51,717.30 911.75,714.75
@@ -749,7 +780,8 @@
              996.04,689.64 993.83,692.12 993.00,697.25
              991.58,706.00 987.74,711.59 983.50,716.50
             980.50,719.50 979.26,720.41 970.75,722.00 Z" />
-    <path id="rock1Glare" class="rock rockGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 968.00,649.00
+    <path id="rock1Glare" class="rock rockGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 968.00,649.00
            C 968.00,649.00 966.38,641.38 966.38,641.38
              966.38,641.38 966.62,639.25 965.12,632.38
              964.65,631.48 966.18,629.73 966.75,627.38
@@ -846,7 +878,8 @@
             917.94,685.75 914.99,686.39 913.50,687.62 Z" />
   </g>
   <g id="rock2All" class="pointOfInterest genericWalkTo">
-    <path id="rock2" class="rock rockFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 746.00,537.88
+    <path id="rock2" class="rock rockFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 746.00,537.88
                C 749.19,536.89 752.96,536.61 755.50,536.50
                  759.00,536.38 771.38,536.62 774.00,536.38
                  776.62,535.88 783.25,534.88 784.88,535.75
@@ -883,7 +916,8 @@
                  726.17,551.12 728.63,549.88 731.00,548.00
                  734.12,544.75 738.75,541.12 738.75,541.12
             738.75,541.12 741.97,539.12 746.00,537.88 Z" />
-    <path id="rock2Shade" class="rock rockShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 808.75,568.12
+    <path id="rock2Shade" class="rock rockShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 808.75,568.12
            C 808.35,570.78 807.25,572.25 806.00,573.38
              805.15,574.05 803.57,576.34 801.75,577.88
              799.84,579.48 797.56,579.94 797.50,580.00
@@ -918,7 +952,8 @@
              792.62,576.26 795.12,573.62 795.12,573.62
              795.12,573.62 800.50,570.50 802.62,570.38
             804.00,569.12 809.00,564.25 808.75,568.12 Z" />
-    <path id="rock2Glare" class="rock rockGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 806.25,561.50
+    <path id="rock2Glare" class="rock rockGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 806.25,561.50
                C 805.50,560.75 803.75,560.38 803.12,559.25
                  802.88,558.00 801.50,556.75 800.88,555.62
                  800.38,554.38 797.12,552.12 796.25,551.75
@@ -979,7 +1014,8 @@
             747.12,548.50 746.54,548.54 746.25,546.62 Z" />
   </g>
   <g id="rock3All" class="pointOfInterest genericWalkTo">
-    <path id="rock3" class="rock rockFace" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 873.88,480.12
+    <path id="rock3" class="rock rockFace" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 873.88,480.12
                C 871.76,478.98 868.39,478.08 867.25,476.00
                  867.16,475.52 869.56,470.35 871.75,466.75
                  873.62,463.67 876.36,461.13 878.12,458.62
@@ -1002,7 +1038,8 @@
                  886.59,484.82 883.05,484.99 880.38,484.38
                  878.03,483.84 876.38,482.50 876.38,482.50
             876.38,482.50 875.70,481.12 873.88,480.12 Z" />
-    <path id="rock3Shade" class="rock rockShade" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 880.25,478.88
+    <path id="rock3Shade" class="rock rockShade" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 880.25,478.88
            C 881.75,479.62 890.50,479.00 894.00,479.25
              895.08,479.29 898.69,479.29 900.88,479.62
              904.78,480.23 907.78,481.29 909.62,481.12
@@ -1022,7 +1059,8 @@
              870.48,469.89 871.70,471.79 873.00,473.25
              874.19,474.58 875.48,475.39 876.25,475.75
              879.38,476.25 878.00,478.12 880.25,478.88 Z" />
-    <path id="rock3Glare" class="rock rockGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 875.88,461.75
+    <path id="rock3Glare" class="rock rockGlare" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 875.88,461.75
            C 877.75,458.67 876.36,461.13 878.12,458.62
              880.26,455.58 880.12,455.25 881.25,452.88
              882.14,451.56 884.88,449.39 886.38,449.38
@@ -1095,7 +1133,8 @@
              914.35,479.09 915.17,479.22 915.65,479.04 Z" />
   </g>
   <g id="flamingone">
-    <path id="torso" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 311.21,560.27
+    <path id="torso" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"
+      d="M 311.21,560.27
            C 307.10,565.12 301.50,564.00 299.26,558.02
              292.17,554.29 288.43,550.93 290.67,543.46
              291.42,538.23 288.43,533.00 285.44,528.52
@@ -1133,20 +1172,23 @@
              300.94,499.77 298.70,503.69 298.70,506.86M 293.47,503.69
            C 293.47,503.69 295.34,499.58 296.83,498.65
              298.14,496.22 297.39,488.94 298.51,487.63" />
-    <path id="beakBottom" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 307.71,432.45
+    <path id="beakBottom" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="1" d="M 307.71,432.45
            C 307.71,432.45 311.20,431.53 310.10,430.61
              310.10,430.43 309.91,427.68 305.14,424.92
              305.14,424.92 300.67,423.54 300.73,424.37
              300.93,426.72 301.29,430.30 301.84,430.98
              304.22,432.27 305.87,432.45 307.71,432.45 Z
            M 305.14,548.11" />
-    <path id="beakTop" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 314.67,423.20
+    <path id="beakTop" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"
+      d="M 314.67,423.20
            C 314.67,423.20 306.39,416.00 303.32,414.02
              297.02,415.46 300.08,425.73 301.34,426.27
              303.30,426.52 307.47,426.63 310.17,429.51
              314.20,434.82 315.57,445.00 315.57,445.00
              316.83,438.70 314.67,423.20 314.67,423.20 Z" />
-    <path id="flamingoneEye" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="2" d="M 296.58,404.86
+    <path id="flamingoneEye" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black"
+      stroke-width="2" d="M 296.58,404.86
            C 296.58,402.55 298.31,397.35 300.04,396.58
              302.16,396.19 303.32,396.77 304.67,397.73
              305.82,399.66 306.40,405.05 305.44,407.94
@@ -1156,28 +1198,28 @@
 
   <defs id="mapDefs">
     <linearGradient id='gradDirt' x1='0%' y1='100%' x2='100%' y2='0%'>
-      <stop id='gradDirtStop0' class='gradStop' offset='0%'/>
-      <stop id='gradDirtStop100' class='gradStop' offset='100%'/>
+      <stop id='gradDirtStop0' class='gradStop' offset='0%' />
+      <stop id='gradDirtStop100' class='gradStop' offset='100%' />
     </linearGradient>
     <radialGradient id='gradPines' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
-      <stop id='gradPinesStop0' class='gradStop' offset='0%'/>
-      <stop id='gradPinesStop100' class='gradStop' offset='100%'/>
+      <stop id='gradPinesStop0' class='gradStop' offset='0%' />
+      <stop id='gradPinesStop100' class='gradStop' offset='100%' />
     </radialGradient>
     <radialGradient id='gradTrunk' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
-      <stop id='gradTrunkStop0' class='gradStop' offset='0%'/>
-      <stop id='gradTrunkStop100' class='gradStop' offset='100%'/>
+      <stop id='gradTrunkStop0' class='gradStop' offset='0%' />
+      <stop id='gradTrunkStop100' class='gradStop' offset='100%' />
     </radialGradient>
 
     <!-- Sky patterns -->
     <!-- href links need to be moved to css if possible -->
-    <pattern id='patSkyBot' x='0' y='0' width='1024' height='768' patternUnits='userSpaceOnUse' >
-      <image xlink:href='/assets/firstMap/skyGreyBot.png' x='0' y='0' width='1024' height='768'/>
+    <pattern id='patSkyBot' x='0' y='0' width='1024' height='768' patternUnits='userSpaceOnUse'>
+      <image xlink:href='/assets/firstMap/skyGrayBot.png' x='0' y='0' width='1024' height='768' />
     </pattern>
     <pattern id='patSkyMid' x='0' y='0' width='1024' height='768' patternUnits='userSpaceOnUse'>
-      <image xlink:href='/assets/firstMap/skyGreyMid.png' x='0' y='0' width='1024' height='768'/>
+      <image xlink:href='/assets/firstMap/skyGrayMid.png' x='0' y='0' width='1024' height='768' />
     </pattern>
-    <pattern id='patSkyTop' x='0' y='0' width='1024' height='768' patternUnits='userSpaceOnUse' >
-      <image xlink:href='/assets/firstMap/skyGreyTop.png' x='0' y='0' width='1024' height='768'/>
+    <pattern id='patSkyTop' x='0' y='0' width='1024' height='768' patternUnits='userSpaceOnUse'>
+      <image xlink:href='/assets/firstMap/skyGrayTop.png' x='0' y='0' width='1024' height='768' />
     </pattern>
   </defs>
 </svg>

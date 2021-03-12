@@ -5,7 +5,15 @@
             "standX": 200,
             "standY": 200,
             "descriptions": [
-                "This road road road rodadendrone. It leads south maybe."
+                "Follow me and you'll be in good compnay"
+            ]
+        },
+        {
+            "id": "dirtRoadEast",
+            "standX": 500,
+            "standY": 150,
+            "descriptions":[
+                "This road road road rodadendrone. It leads east maybe."
             ]
         },
         {
@@ -154,5 +162,8 @@
                 "These stones are warm."
             ]
         }
+    ],
+    "suburbMap": [
+
     ]
 }

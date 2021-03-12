@@ -1,0 +1,92 @@
+#svgContianer{
+background-color: azure;
+}
+
+.ground {
+    stroke: none
+}
+
+#ground {
+    fill: var(--brown);
+}
+
+#groundLeftMiddle, #groundRightHighest{
+    fill: var(--tan);
+}
+
+#groundLeftHigh{
+    fill: var(--sandstone);
+}
+
+#groundLeftHighest{
+    fill: var(--gold);
+}
+
+.snow {
+    fill: white;
+}
+
+.wood {
+    fill: var(--brownshade);
+}
+
+#distantTrees {
+    fill: var(--greenglare);
+}
+
+/* trees */
+.leaves{
+    fill: var(--greenglare);
+}
+.shingles path{
+    fill: var(--gray3);
+}
+
+.ceramicShingles path{
+    fill: var(--tan);
+}
+
+.trunk{
+    fill: var(--brown);
+}
+
+.details, .leaves, .thick{
+    stroke-width: 5px;
+}
+
+/* end of trees */
+
+/* apple */
+#appleMain{
+    fill: var(--red);
+}
+
+#appleRear{
+    fill: var(--reddark);
+}
+
+#appleMouth{
+    stroke-width: 5px;
+    stroke: var(--reddark);
+    stroke-linecap: round;
+}
+
+#appleEyes, #appleStem{
+    fill: var(--gray6)
+}
+/* end of apple */
+
+#flamingoneCloseUp .eye{
+    filter: url(#filterSketch)
+}
+
+#eyeProfile{
+    perspective: 400;
+}
+#magicRing{
+    filter: url(#filterTurbulenceMap)
+}
+
+.sketch{
+    filter: url(#filterSketch)
+}

@@ -1,46 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Flamingone</title>
+    <link rel="stylesheet" type="text/css" href="css/flamingone.css" />
+    <link rel="stylesheet" type="text/css" href="css/pallet1.css" />
+    <link rel="stylesheet" type="text/css" href="css/guiMenus.css" />
+    <link rel="stylesheet" type="text/css" href="css/tools.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Flamingone</title>
-  <link rel="stylesheet" type="text/css" href="css/flamingone.css">
-  <link rel="stylesheet" type="text/css" href="css/pallet1.css">
-  <link rel="stylesheet" type="text/css" href="css/guiMenus.css">
-  <link rel="stylesheet" type="text/css" href="css/tools.css">
-</head>
-
-<body oncontextmenu="return false">
-  <svg id="svgContainer" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-    </defs>
-  </svg>
-  <div id="toolContainer" class="menu"></div>
-  <div id="messageContainer" class="menu">
-    <img id="messageImg" width="250px" height="250px" />
-    <p id="messageP"></p>
-  </div>
-  <!-- jquery libraries -->
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
-  <!-- gsap libraries -->
-  <script type="text/javascript" src="js/gsap-public/umd/gsap.js"></script>
-  <script type="text/javascript" src="js/gsap-public/umd/Draggable.js"></script>
-  <!-- d3 libraries -->
-  <script type="text/javascript" src="js/d3/d3.js"></script>
-  <script type="text/javascript" src="js/d3/d3-queue.js"></script>
-  <!-- my libraries -->
-  <script type="text/javascript" src="js/svgGeneric.js"></script>
-  <script type="text/javascript" src="js/parallaxSVG.js"></script>
-  <!-- classes -->
-  <script type="text/javascript" src="js/pointOfInterest.js"></script>
-  <script type="text/javascript" src="js/tool.js"></script>
-  <!-- controllers -->
-  <script type="text/javascript" src="js/guiMenus.js"></script>
-  <script type="text/javascript" src="js/mapNavigation.js"></script>
-  <script type="text/javascript" src="js/inventoryFunctions.js"></script>
-  <!-- flamingone -->
-  <script type="text/javascript" src="js/flamingone.js"></script>
-</body>
-
+  <body oncontextmenu="return false" onload="curtainUp()">
+    <svg id="globalDefs">
+      <defs>
+        <g id="filters">
+          <filter
+            id="filterTemplate"
+            width="300%"
+            height="300%"
+            x="-100%"
+            y="-100%"
+          />
+          <filter id="filterSketch" href="#filterTemplate">
+            <feTurbulence
+              seed="5683246"
+              numOctaves="2"
+              baseFrequency="0.01"
+              result="turb1"
+            />
+            <feTurbulence
+              seed="32344"
+              numOctaves="2"
+              baseFrequency="0.01"
+              result="turb2"
+            />
+            <feTurbulence
+              seed="1223"
+              numOctaves="2"
+              baseFrequency="0.01"
+              result="turb3"
+            />
+            <feDisplacementMap
+              scale="20"
+              in="SourceGraphic"
+              in2="turb1"
+              result="dm1"
+            />
+            <feDisplacementMap
+              scale="20"
+              in="StrokePaint"
+              in2="turb2"
+              result="dm2"
+            />
+            <feDisplacementMap
+              scale="20"
+              in="StrokePaint"
+              in2="turb3"
+              result="dm3"
+            />
+            <feMerge>
+              <feMergeNode in="dm1" />
+              <feMergeNode in="dm2" />
+              <feMergeNode in="dm3" />
+            </feMerge>
+          </filter>
+          <filter id="filterTurbulenceMap" href="#filterTemplate">
+            <feturbulence
+              seed="231"
+              numOctaves="8"
+              baseFrequency="0.03"
+              result="radialTurb"
+            />
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="radialTurb"
+              xChannelSelector="A"
+              yChannelSelector="A"
+              scale="-20"
+            />
+          </filter>
+          <filter id="filterNoise" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence baseFrequency="0.05" />
+          </filter>
+          <filter id="filterCloud">
+            <feTurbulence
+              id="turbulence"
+              type="fractalNoise"
+              baseFrequency="0.024"
+              numOctaves="19"
+              seed="1"
+            ></feTurbulence>
+            <feDisplacementMap
+              in="SourceGraphic"
+              scale="500"
+              result="turb"
+            ></feDisplacementMap>
+            <feGaussianBlur in="turb" stdDeviation="1.2" />
+          </filter>
+          <filter id="filterShade">
+            <feComponentTransfer>
+              <feFuncR type="linear" slope="0.5" />
+              <feFuncG type="linear" slope="0.5" />
+              <feFuncB type="linear" slope="0.5" />
+            </feComponentTransfer>
+          </filter>
+          <filter id="filterLit">
+            <feComponentTransfer>
+              <feFuncR type="linear" slope="1.2" />
+              <feFuncG type="linear" slope="1.2" />
+              <feFuncB type="linear" slope="1.2" />
+            </feComponentTransfer>
+          </filter>
+        </g>
+      </defs>
+    </svg>
+    <svg id="svgContainer" xmlns="http://www.w3.org/2000/svg"></svg>
+    <svg
+      id="draggerContainer"
+      class="draggerBounds"
+      width="550"
+      height="100"
+      viewBox="0 0 550 100"
+    >
+      <line
+        x1="20"
+        y1="45"
+        x2="530"
+        y2="45"
+        fill="none"
+        stroke="#fff"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-width="6"
+      />
+      <g id="dragger">
+        <g id="draggerIcon"></g>
+      </g>
+    </svg>
+    <div id="toolContainer" class="menu"></div>
+    <div id="curtain" />
+    <div id="messageContainer" class="menu">
+      <img id="messageImg" width="250px" height="250px" />
+      <p id="messageP"></p>
+    </div>
+    <!-- jquery libraries -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery-ui-1.12.1/jquery-ui.js"
+    ></script>
+    <!-- gsap libraries -->
+    <script
+      type="text/javascript"
+      src="js/gsap-shockingly-green/umd/gsap.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/gsap-shockingly-green/umd/Draggable.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/gsap-shockingly-green/umd/MorphSVGPlugin.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/gsap-shockingly-green/umd/DrawSVGPlugin.js"
+    ></script>
+    <!-- my libraries -->
+    <script type="text/javascript" src="js/svgGeneric.js"></script>
+    <script type="text/javascript" src="js/parallaxSVG.js"></script>
+    <!-- classes -->
+    <script type="text/javascript" src="js/pointOfInterest.js"></script>
+    <script type="text/javascript" src="js/tool.js"></script>
+    <!-- controllers -->
+    <script type="text/javascript" src="js/guiMenus.js"></script>
+    <script type="text/javascript" src="js/mapNavigation.js"></script>
+    <script type="text/javascript" src="js/inventoryFunctions.js"></script>
+    <!-- flamingone -->
+    <script type="text/javascript" src="js/flamingone.js"></script>
+  </body>
 </html>

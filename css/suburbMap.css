@@ -1,87 +1,513 @@
-/* patterns */
+body {
+    --black         : rgb(0, 0, 0);
+    --gray-dark     : rgb(51, 51, 51);
+    --gray          : rgb(102, 102, 102);
+    --gray-light    : rgb(153, 153, 153);
+    --gray-lighter  : rgb(204, 204, 204);
+    --white         : rgb(255, 255, 255);
+    --pink-light    : rgb(255, 204, 204);
+    --pink-dark     : rgb(204, 153, 153);
+    --pink-darker   : rgb(153, 102, 102);
+    --pink          : rgb(255, 153, 153);
+    --rose-dark     : rgb(102, 51, 51);
+    --rose          : rgb(204, 102, 102);
+    --red-lighter   : rgb(255, 102, 102);
+    --amaranth      : rgb(153, 51, 51);
+    --red-light     : rgb(204, 51, 51);
+    --red-darker    : rgb(51, 0, 0);
+    --red-dark      : rgb(102, 0, 0);
+    --red           : rgb(153, 0, 0);
+    --raspberry     : rgb(153, 0, 51);
+    --burnt         : rgb(153, 51, 0);
+    --tangerine     : rgb(255, 153, 102);
+    --coral         : rgb(204, 102, 51);
+    --sunset        : rgb(255, 204, 153);
+    --sunset-dark   : rgb(204, 153, 102);
+    --sunset-darker : rgb(153, 102, 51);
+    --orange        : rgb(255, 153, 51);
+    --rust          : rgb(102, 51, 0);
+    --orange-dark   : rgb(204, 102, 0);
+    --caramel       : rgb(153, 102, 0);
+    --marigold      : rgb(204, 153, 51);
+    --mustard       : rgb(255, 204, 102);
+    --ivory         : rgb(255, 255, 204);
+    --eggshell      : rgb(204, 204, 153);
+    --bone          : rgb(153, 153, 102);
+    --yellow        : rgb(255, 255, 153);
+    --yellow-dark   : rgb(204, 204, 102);
+    --gold-light    : rgb(153, 153, 51);
+    --cafe-noir     : rgb(51, 51, 0);
+    --gold          : rgb(102, 102, 0);
+    --green         : rgb(102, 153, 102);
+    --green-dark    : rgb(51, 102, 51);
+    --jungle        : rgb(51, 102, 102);
+    --green-midnight: rgb(0, 51, 51);
+    --oxford        : rgb(0, 0, 51);
 
-#redCloud {
-    fill: url(#patRedCloud);
+    --house-white          : hsl(169, 100%, 98%);
+    --house-trim-black     : hsl(330, 2%, 18%);
+    --house-trim-white     : hsl(273, 26%, 83%);
+    --house-gray           : hsl(10, 10%, 52%);
+    --house-trim-gray      : hsl(287, 9%, 60%);
+    --house-brown          : hsl(11, 88%, 23%);
+    --house-trim-brown     : hsl(14, 38%, 46%);
+    --house-trim-brown-dark: hsl(24, 55%, 34%);
+    --house-red            : hsl(355, 67%, 26%);
+    --house-pink           : hsl(6, 79%, 85%);
+    --house-orange         : hsl(28, 100%, 53%);
+    --house-yellow         : hsl(40, 94%, 49%);
+    --house-green          : hsl(99, 22%, 53%);
+    --house-trim-green     : hsl(52, 40%, 32%);
+    --house-blue           : hsl(208, 42%, 19%);
+    --house-trim-blue      : hsl(145, 11%, 39%);
+    --house-sky-blue       : hsl(203, 99%, 66%);
+    --house-trim-blue-light: hsl(218, 41%, 74%);
+    --house-purple         : hsl(278, 51%, 59%);
+    --house-trim-purple    : hsl(263, 49%, 73%);
 }
 
-#greyCloud {
-    fill: url(#patGreyCloud);
+svg {
+    position : absolute;
+    top      : 0%;
+    right    : 0%;
+    overflow : visible;
+    /* filter: url(#filterCloud) */
 }
 
-/* gradients */
-
-.gradStop {
-    stop-opacity: 1;
+/* House Styles */
+.houseWhite .houseFace {
+    fill: var(--house-white);
 }
 
-#gradGrassStop0 {
-    stop-color: var(--greenshade);
+.houseGray .houseFace {
+    fill: var(--house-gray);
 }
 
-#gradGrassStop100 {
-    stop-color: var(--green);
+.houseBrown .houseFace {
+    fill: var(--house-brown);
 }
 
-#grass {
-    fill: url(#gradGrass);
+.houseRed .houseFace {
+    fill: var(--house-red);
 }
 
-/* colors */
-
-#road, .gasHose {
-    fill: var(--grey3);
+.housePink .houseFace {
+    fill: var(--house-pink);
 }
 
-#gasStationGround{
-    fill: var(--grey9);
+.houseYellow .houseFace {
+    fill: var(--house-yellow);
 }
 
-#gasStationGroundDark{
-    fill: var(--grey6);
+.houseGreen .houseFace {
+    fill: var(--house-green);
 }
 
-#houseHindFace {
-    fill: var(--browndark);
+.houseBlue .houseFace {
+    fill: var(--house-blue);
 }
 
-#houseMidFace {
-    fill: var(--brown);
+.houseSkyBlue .houseFace {
+    fill: var(--house-sky-blue);
 }
 
-#houseTopFace {
-    fill: var(--brown);
+.housePurple .houseFace {
+    fill: var(--house-purple);
 }
 
-#houseForeFace {
-    fill: var(--brownlight);
+/* trim */
+/* trim and doors get same color pool */
+.houseTrimBlack .houseEaves {
+    fill: var(--house-trim-black);
 }
 
-#houseTurretFace {
-    fill: var(--brownlight);
+.houseTrimWhite .houseEaves {
+    fill: var(--house-trim-white);
 }
 
-.teeth, #houseFirstEaves, #houseSecondEaves {
-    fill: var(--cream);
+.houseTrimGray .houseEaves {
+    fill: var(--house-trim-gray);
 }
 
-.roof {
-    fill: var(--grey);
+.houseTrimBrown .houseEaves {
+    fill: var(--house-trim-brown);
 }
 
-/* red */
-
-#hoodFront, #hoodRight{
-    fill: var(--red);
+.houseTrimBrownDark .houseEaves {
+    fill: var(--house-trim-brown-dark);
 }
 
-#hoodUnder{
-    fill: var(--reddark);
+.houseTrimGreen .houseEaves {
+    fill: var(--house-trim-green);
 }
 
-#tongue {
-    fill: var(--pink);
+.houseTrimBlue .houseEaves {
+    fill: var(--house-trim-blue);
 }
 
-#tongueBack {
-    fill: var(--pinkdark);
+.houseTrimBlueLight .houseEaves {
+    fill: var(--house-trim-blue-light);
 }
+
+.houseTrimPurple .houseEaves {
+    fill: var(--house-trim-purple);
+}
+
+/* doors */
+.houseDoorBlack .houseDoor {
+    fill: var(--house-trim-black);
+}
+
+.houseDoorWhite .houseDoor {
+    fill: var(--house-trim-white);
+}
+
+.houseDoorGray .houseDoor {
+    fill: var(--house-trim-gray);
+}
+
+.houseDoorBrown .houseDoor {
+    fill: var(--house-trim-brown);
+}
+
+.houseDoorBrownDark .houseDoor {
+    fill: var(--house-trim-brown-dark);
+}
+
+.houseDoorGreen .houseDoor {
+    fill: var(--house-trim-green);
+}
+
+.houseDoorBlue .houseDoor {
+    fill: var(--house-trim-blue);
+}
+
+.houseDoorBlueLight .houseDoor {
+    fill: var(--house-trim-blue-light);
+}
+
+.houseDoorPurple .houseDoor {
+    fill: var(--house-trim-purple);
+}
+
+/* roof */
+/* roof and awning get same color pool */
+.houseRoofGray .houseRoof {
+    fill: var(--house-gray);
+}
+
+.houseRoofBlack .houseRoof {
+    fill: var(--house-trim-black);
+}
+
+/* awning */
+.houseAwningGray .houseAwning {
+    fill: var(--house-gray);
+}
+
+.houseAwningBlack .houseAwning {
+    fill: var(--house-trim-black);
+}
+
+.garageDoorWhite .garageDoor {
+    fill: url(#patternGarageWhite);
+}
+
+.garageDoorBlue .garageDoor {
+    fill: url(#patternGarageBlue);
+}
+
+/* End of House Styles */
+
+#draggerContainer {
+    position : absolute;
+    top      : 85%;
+    left     : 50%;
+    max-width: 90%;
+}
+
+#draggerIcon path {
+    fill: var(--white);
+}
+
+#messageImg {
+    display: none;
+}
+
+#messageContainer {
+    position        : relative;
+    width           : 50%;
+    /* min-width    : 683px; */
+    border          : solid black 5px;
+    display         : none;
+    padding         : 1em;
+    background-color: rgba(3, 3, 3, 0.3);
+    text-shadow     : 3px 0px 1px #FFF, -3px 0px 1px #FFF, 0px -3px 1px #FFF, 0px 3px 1px #FFF;
+}
+
+#messageContainer,
+.ui-dialog-titlebar-close {
+    font-size  : 32px;
+    font-weight: bolder;
+    text-align : center;
+}
+
+.ui-dialog-titlebar-close {
+    right  : -12em;
+    top    : 2em;
+    width  : 2em;
+    height : 2em;
+    padding: 1px;
+    border : none;
+
+    background-color: #C56;
+}
+
+#svgContainer {
+    background: radial-gradient(var(--red-dark), black);
+}
+
+.moveTo {
+    visibility: hidden;
+}
+
+/* move to a flamingone css */
+#torso {
+    fill: white;
+}
+
+/* maelstrom */
+.vortex image {
+    width  : 2400;
+    height : 2400;
+    opacity: 0.5;
+}
+
+/* common fills */
+
+.shade,
+#secondStreet .lawn {
+    filter: url(#filterShade);
+}
+
+.lit {
+    filter: url(#filterLit);
+}
+
+.lawn {
+    fill        : url(#patternGrass);
+    stroke-width: 0;
+}
+
+.stone {
+    fill: url(#patternStoneGray);
+}
+
+.wood.door,
+.wood.fence {
+    fill: url(#patternWoodDoor);
+}
+
+.road {
+    fill  : black;
+    height: 50;
+}
+
+.noStroke,
+.fence,
+.driveway,
+.walkway,
+.curb {
+    stroke-width: 0;
+}
+
+.details,
+.noFill {
+    fill: none;
+}
+
+.glass,
+.houseInterior {
+    fill: url(#patternGlass);
+}
+
+/* gasStation */
+
+.tongue {
+    fill: url(#patternTongue);
+}
+
+#hoodUnder {
+    fill: url(#rGradPink);
+}
+
+.hoodBorder {
+    fill: url(#lGradRedDark);
+}
+
+.tooth {
+    fill: url(#rGradWhite);
+}
+
+.glassDoor {
+    fill   : white;
+    opacity: 0.5;
+}
+
+#gasStationLotDark {
+    fill        : url(#patternStoneGray);
+    stroke-width: 0;
+}
+
+#gasStationLot {
+    fill: url(#rGradAsphalt);
+}
+
+.gasHose {
+    fill: var(--black);
+}
+
+/* end of gasStation */
+
+/* second street */
+.fence.chain {
+    fill: url(#patternChainLinkFence);
+}
+
+.backGarden {
+    fill: darkgreen;
+}
+
+.backHouseFace {
+    fill: var(--house-trim-black);
+}
+
+.backHouse .roof {
+    fill: url(#patternShingles);
+}
+
+/* end of back house*/
+
+/* University */
+.university .face {
+    fill: url(#patternBrickRed);
+}
+
+.university .window {
+    stroke-width: 2;
+    fill        : url(#patternStainedGlass);
+}
+
+.wroughtIron {
+    fill: var(--black);
+}
+
+.university .roof,
+.crown {
+    fill: url(#patternShingles);
+}
+
+.plaque {
+    fill: url(#patternGold);
+}
+
+.clock {
+    fill: var(--white);
+}
+
+/* end of university */
+
+/* college */
+.college .door {
+    fill: url(#patternGarageBlue)
+}
+
+.collegeEast .face {
+    fill: url(#lGradYellowDark);
+}
+
+.collegeWest .face {
+    fill: url(#lGradRedDark);
+}
+
+.collegeRear .face {
+    fill: url(#lGradGreenDark);
+}
+
+.collegeMain,
+.college .roof {
+    fill: url(#lGradBlueDark);
+}
+
+#collegeMainFace {
+    fill: url(#patternFramedGlass);
+}
+
+/* end of college */
+/* warehouse */
+#warehouse .face {
+    fill: url(#patternBrickGray);
+}
+
+#warehouse .east {
+    filter: url(#filterLit);
+}
+
+#warehouse .west {
+    filter: url(#filterShade);
+}
+
+#warehouseGround {
+    fill: url(#rGradAsphalt);
+}
+
+.bayDoor {
+    fill: url(#patternGarageWhite);
+}
+
+.warehouse .door {
+    fill: url(#lGradRedDark);
+}
+
+.checkerPlate {
+    fill: url(#patternCheckerPlate);
+}
+
+/* end of warehouse */
+/* office */
+
+.office .face {
+    fill        : url(#patternBrickRed);
+    stroke-width: 0;
+}
+
+.office .roof {
+    fill: url(#lGradBlueDark);
+}
+
+/* end of office */
+
+/* end of second streeet */
+
+/* temp rules delete me */
+#layer1,
+#layer2,
+#layer3 {
+    /* visibility: hidden; */
+}
+
+#houseNo100,
+#houseNo101,
+#houseNo102,
+#houseNo103,
+#houseNo104,
+#houseNo31,
+#secondBlock2 {
+    visibility: hidden;
+}
+
+#houseNo20 path {
+    /* fill: url(#patternCheckerPlate); */
+}
+
+/* end of temp rule */

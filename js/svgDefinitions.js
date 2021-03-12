@@ -9,7 +9,7 @@ linearGradient = function (color1, color2) {
         "</linearGradient>";
 }
 
-//radical
+//radial
 radialGradient = function (color1, color2) {
     return "<radialGradient id='gradTree' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>" +
         `<stop offset='0%' style='stop-color: ${color1}; stop-opacity:1' />` +

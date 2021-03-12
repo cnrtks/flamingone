@@ -19,31 +19,31 @@
 /* patterns */
 /* these do nothing at the moment please fix */
 body {
-    --skyBot: url('/assets/firstMap/skyGreyBot.png');
-    --skyMid: url('/assets/firstMap/skyGreyMid.png');
-    --skyTop: url('/assets/firstMap/skyGreyTop.png');
+    --skyBot: url('/assets/firstMap/skyGrayBot.png');
+    --skyMid: url('/assets/firstMap/skyGrayMid.png');
+    --skyTop: url('/assets/firstMap/skyGrayTop.png');
 }
 
 .skyBot{ fill: url(#patSkyBot); }
 .skyMid{ fill: url(#patSkyMid); }
 .skyTop{ fill: url(#patSkyTop); }
 
-/* grey */
+/* gray */
 
 #flamingoneEye {
     fill: white;
 }
 
 .tileFace, .rockFace {
-    fill: var(--grey);
+    fill: var(--gray);
 }
 
 .tileGlare, .rockGlare, #headstoneEdge {
-    fill: var(--greyglare);
+    fill: var(--grayglare);
 }
 
 .tileShade, .rockShade, #headstoneFace, #torso {
-    fill: var(--greyshade);
+    fill: var(--grayshade);
 }
 
 /* brown */
