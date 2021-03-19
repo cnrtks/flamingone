@@ -1,4 +1,5 @@
 body {
+    transform: translate3d(0,0,0);
     --black         : rgb(0, 0, 0);
     --gray-dark     : rgb(51, 51, 51);
     --gray          : rgb(102, 102, 102);
@@ -64,6 +65,10 @@ body {
     --house-trim-blue-light: hsl(218, 41%, 74%);
     --house-purple         : hsl(278, 51%, 59%);
     --house-trim-purple    : hsl(263, 49%, 73%);
+}
+
+body{
+    background: radial-gradient(var(--red-dark), black);
 }
 
 svg {
@@ -263,12 +268,12 @@ svg {
     background-color: #C56;
 }
 
-#svgContainer {
-    background: radial-gradient(var(--red-dark), black);
+#draggerContainer{
+    visibility: visible;
 }
 
-.moveTo {
-    visibility: hidden;
+#svgContainer {
+background-color: var(--transparent);
 }
 
 /* move to a flamingone css */
@@ -278,8 +283,8 @@ svg {
 
 /* maelstrom */
 .vortex image {
-    width  : 2400;
-    height : 2400;
+    width  : 220%;
+    height : 220%;
     opacity: 0.5;
 }
 
@@ -489,13 +494,6 @@ svg {
 
 /* end of second streeet */
 
-/* temp rules delete me */
-#layer1,
-#layer2,
-#layer3 {
-    /* visibility: hidden; */
-}
-
 #houseNo100,
 #houseNo101,
 #houseNo102,
@@ -504,6 +502,13 @@ svg {
 #houseNo31,
 #secondBlock2 {
     visibility: hidden;
+}
+
+/* temp rules delete me */
+#layer1,
+#layer2,
+#layer3 {
+    /* visibility: hidden; */
 }
 
 #houseNo20 path {

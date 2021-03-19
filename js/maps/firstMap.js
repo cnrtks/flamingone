@@ -1,5 +1,5 @@
 var tileFall;
-let poiData = [
+poiData = [
   {
     id: "dirtRoadSouth",
     standX: 200,
@@ -46,6 +46,7 @@ let poiData = [
 
 go = function () {
   localPOIsFromData(poiData);
+  if (deathCount) gsap.set(".grave", { visibility: "visible" });
   flamingone = document.getElementById("flamingone");
   gsap.set(flamingone, { scale: 0.7 }); //initialize scale
 
@@ -155,6 +156,7 @@ go = function () {
   //generic POI funcitions
   setDefaultPoiDialog();
   setDefaultPoiMoveTo();
+  curtainUp();
 }; //end of GO
 
 svgContainer.load(`assets/firstMap/firstMap.svg`, go);

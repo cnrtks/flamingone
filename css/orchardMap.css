@@ -90,3 +90,7 @@ background-color: azure;
 .sketch{
     filter: url(#filterSketch)
 }
+
+.road{
+    fill: var(--brownlight)
+}

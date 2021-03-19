@@ -31,6 +31,7 @@ rect = function (params) {
   return createSvgElement("rect", params);
 };
 
+//what the fuck is this?
 ringFromPath = function (pathId, params) {
   let boundingRect = pathId.getBoundingClientRect();
   let midX = boundingRect.width / 2 + boundingRect.left;

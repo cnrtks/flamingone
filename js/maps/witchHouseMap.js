@@ -1,5 +1,3 @@
-var POIs = new Array();
-
 //import mapElements.json for POI data.
 $.ajax({
     type: "GET", url: "data/mapElements.json",
@@ -44,7 +42,9 @@ go = function () {
             if (poi.id == e.currentTarget.id)
                 moveTo(poi.standX, poi.standY);
         }
-    })
+    });
+
+    curtainUp();
 }//end of GO
 
 //adds gradients and patterns.

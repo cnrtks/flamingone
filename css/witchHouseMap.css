@@ -1,4 +1,4 @@
-/* grey */
+/* gray */
 #houseExtInterior, #houseMainInterior, #doorDaisyStamen {
     fill: black;
 }
@@ -9,10 +9,10 @@
     fill: white;
 }
 #doorKeystoneFace{
-    fill: var(--grey);
+    fill: var(--gray);
 }
 #torso, #stonePath, #doorKeystoneEdges {
-    fill: var(--greyshade);
+    fill: var(--grayshade);
 }
 /* brown */
 .houseBoard, .doorframe, #volcano, #palmTrunk {

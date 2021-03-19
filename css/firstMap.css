@@ -1,21 +1,51 @@
-
-.grave { display: none; }
+.grave {
+    visibility: hidden
+}
 
 /*FIXME: remove or fix dropshadow*/
 /* .pointOfInterest {filter: url(#dropshadow);} */
 
 /* gradients */
-.gradStop { stop-opacity: 1; }
-#gradDirtStop0 { stop-color: var(--browndark); }
-#gradDirtStop100 { stop-color: var(--brownglare); }
-#gradPinesStop0 { stop-color: var(--greenshade); }
-#gradPinesStop100 { stop-color: var(--greenglare); }
-#gradTrunkStop0 { stop-color: var(--brownlightshade); }
-#gradTrunkStop100 { stop-color: var(--brownlightglare); }
+.gradStop {
+    stop-opacity: 1;
+}
 
-#dirt{ fill: url(#gradDirt); }
-#trunk{ fill: url(#gradTrunk); }
-.treePines{ fill: url(#gradPines); }
+#gradDirtStop0 {
+    stop-color: var(--browndark);
+}
+
+#gradDirtStop100 {
+    stop-color: var(--brownglare);
+}
+
+#gradPinesStop0 {
+    stop-color: var(--greenshade);
+}
+
+#gradPinesStop100 {
+    stop-color: var(--greenglare);
+}
+
+#gradTrunkStop0 {
+    stop-color: var(--brownlightshade);
+}
+
+#gradTrunkStop100 {
+    stop-color: var(--brownlightglare);
+}
+
+#dirt {
+    fill: url(#gradDirt);
+}
+
+#trunk {
+    fill: url(#gradTrunk);
+}
+
+.treePines {
+    fill: url(#gradPines);
+}
+
 /* patterns */
 /* these do nothing at the moment please fix */
 body {
@@ -24,9 +54,17 @@ body {
     --skyTop: url('/assets/firstMap/skyGrayTop.png');
 }
 
-.skyBot{ fill: url(#patSkyBot); }
-.skyMid{ fill: url(#patSkyMid); }
-.skyTop{ fill: url(#patSkyTop); }
+.skyBot {
+    fill: url(#patSkyBot);
+}
+
+.skyMid {
+    fill: url(#patSkyMid);
+}
+
+.skyTop {
+    fill: url(#patSkyTop);
+}
 
 /* gray */
 
@@ -34,15 +72,21 @@ body {
     fill: white;
 }
 
-.tileFace, .rockFace {
+.tileFace,
+.rockFace {
     fill: var(--gray);
 }
 
-.tileGlare, .rockGlare, #headstoneEdge {
+.tileGlare,
+.rockGlare,
+#headstoneEdge {
     fill: var(--grayglare);
 }
 
-.tileShade, .rockShade, #headstoneFace, #torso {
+.tileShade,
+.rockShade,
+#headstoneFace,
+#torso {
     fill: var(--grayshade);
 }
 
@@ -64,6 +108,7 @@ body {
 
 /* pink */
 
-#beakBottom, #beakTop {
+#beakBottom,
+#beakTop {
     fill: var(--pink);
 }

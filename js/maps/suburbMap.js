@@ -1,6 +1,5 @@
 //global values and such
 
-
 //location / positioning
 const houseWidth = 300;
 const houseScale = 1.5;
@@ -17,7 +16,7 @@ let typer = { title: "some boring office bitch", wages: 10, hours: 8 };
 //end of jobs
 
 //flamingone stuff
-let flamingone = {
+let flamingoneData = {
   busy: false,
   speed: 5, //meters per second....ish
   money: 0,
@@ -25,6 +24,21 @@ let flamingone = {
   flamingoneJob: unemployed,
 };
 //end of flamingone stuff
+
+poiData = [
+  {
+    id: "gasStation",
+    coords: [2000, 0],
+    descriptions: ["Gnash 'n Misbehave 'n Gluttony 'n Such"],
+  },
+  { id: "college", descriptions: ["A place for learning"] },
+  { id: "university", descriptions: ["A place for learning, but better"] },
+  {
+    id: "warehouse",
+    descriptions: ["This warehouse eats boxes and shits out boxes."],
+  },
+  { id: "office", descriptions: ["Office"] },
+];
 
 //style arrays for houses
 const houseColors = [
@@ -166,61 +180,86 @@ generateHouseBlock = function (noOfHouses, back) {
   }
   return block;
 };
-//end of suburb specific functions
+//end of suburb generation specific functions
+
+//suburb functions
+atJob = function () {
+  busy = true;
+};
+
+finishJob = function (wage) {
+  busy = false;
+  money += wage;
+};
+
+jobOffer = function (job) {
+  yesNo(`Would you like to work as ${job.title} for ${job.wages}?`, (job) => {
+    flamingoneJob = job;
+    goToWork(job);
+  });
+};
+
+//TODO: do it yo
+goToWork = function (job) {
+  //go to job target (add to master timeline)
+  //set to busy
+  //timeout til hours
+  //not busy
+  //go home
+};
 
 go = function () {
-  
-// PointC
-// 8 may 2018
-// Parallax SVG viewBoxes
-// source code
-// https://greensock.com/forums/topic/18305-quick-tip-technique-parallax-svg-viewboxes/
+  // PointC
+  // 8 may 2018
+  // Parallax SVG viewBoxes
+  // source code
+  // https://greensock.com/forums/topic/18305-quick-tip-technique-parallax-svg-viewboxes/
 
-let factor = [2, 14, 20, 36];
-let travel = 360;
+  let factor = [2, 14, 20, 36];
+  let travel = 360;
 
-Draggable.create("#dragger", {
+  Draggable.create("#dragger", {
     type: "x",
     bounds: {
-        minX: -travel,
-        maxX: travel
+      minX: -travel,
+      maxX: travel,
     },
     throwProps: true,
     edgeResistance: 1,
     onDrag: onDrag,
-    onThrowUpdate: onDrag
-});
+    onThrowUpdate: onDrag,
+  });
 
-function onDrag() {
+  function onDrag() {
     for (i = 0; i < 4; i++) {
-        gsap.set("#layer" + i, {
-            attr: {
-                viewBox: 960 + this.x * factor[i] + " 0 1920 1080"
-            }
-        });
+      gsap.set("#layer" + i, {
+        attr: {
+          viewBox: 960 + this.x * factor[i] + " 0 1920 1080",
+        },
+      });
     }
-}
-//end of Parallax SVG Viewbox
+  }
+  //end of Parallax SVG Viewbox
 
-//change drag icon, works beset with centered svgs
-changeIcon = function (url) {
+  //change drag icon, works beset with centered svgs
+  changeIcon = function (url) {
     $("#draggerIcon").load(url);
     gsap.set("#draggerIcon", { x: 275, y: 0 });
-}
+  };
 
-//centers start position
-onDrag(x = 0);
+  //centers start position
+  onDrag((x = 0));
 
-//initialize with cross
-changeIcon("/assets/icons/diamondCross.svg");
+  //initialize with cross
+  changeIcon("/assets/icons/diamondCross.svg");
 
-//centers dragger
-gsap.set(".draggerBounds", { xPercent: -50 });
-// end of parallaxMotion
+  //centers dragger
+  gsap.set(".draggerBounds", { xPercent: -50 });
+  // end of parallaxMotion
 
-//generates a diamond pattern for stained glass to overwrite #patternStainedGlass in suburbMap.svg<defs>
-//FIXME:this stained glass is all over the place index.html#defs suburb.css suburbPalette.css and here. make more modular
-//FIXME:fills with actual hex value, maybe switch to classes instead of fills if you are bored. not necessary, though
+  //generates a diamond pattern for stained glass to overwrite #patternStainedGlass in suburbMap.svg<defs>
+  //FIXME:this stained glass is all over the place index.html#defs suburb.css suburbPalette.css and here. make more modular
+  //FIXME:fills with actual hex value, maybe switch to classes instead of fills if you are bored. not necessary, though
   let diamonds = group();
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
@@ -265,7 +304,8 @@ gsap.set(".draggerBounds", { xPercent: -50 });
   //end of vector maelstrom stuff
 
   //init maelstrom (the png one)
-  gsap.set("#maelstrom", { x: 2000, y: 200 });
+  gsap.set("#maelstromHeart", { x: 2000, y: 200 });
+  // gsap.set("#maelstromVortex", {x:})
 
   const vortecies = $(".vortex").children().get();
   vortecies.forEach((layer, i) => {
@@ -297,13 +337,20 @@ gsap.set(".draggerBounds", { xPercent: -50 });
     scale: houseScale / 3,
   });
   // load and position gas station
-  $("#gasStationLoad").load("/assets/suburbMap/gasStation.svg#gasStation", () => {
-    gsap.set("#gasStationLoad", {
-      scale: houseScale / 2,
-      x: lotUnit * 6,
-      y: houseY,
-    });
-  });
+  $("#gasStationLoad").load(
+    "/assets/suburbMap/gasStation.svg#gasStation",
+    () => {
+      gsap.set("#gasStationLoad", {
+        scale: houseScale / 2,
+        x: lotUnit * 6,
+        y: houseY,
+      });
+
+      $("#tongueDoorLeft").click(() => {
+        jobOffer(cashier);
+      });
+    }
+  );
 
   //initialize second street
   // secondStreet
@@ -317,9 +364,12 @@ gsap.set(".draggerBounds", { xPercent: -50 });
     gsap.set(secondBlock2, { scale: 0.8, x: lotUnit * 14, y: 450 });
   });
   //university
-  $("#universityLoad").load("/assets/suburbMap/university.svg#university", () => {
-    gsap.set("#universityLoad", { x: lotUnit * -13.5 });
-  });
+  $("#universityLoad").load(
+    "/assets/suburbMap/university.svg#university",
+    () => {
+      gsap.set("#universityLoad", { x: lotUnit * -13.5 });
+    }
+  );
   //college
   $("#collegeLoad").load("/assets/suburbMap/college.svg#college", () => {
     gsap.set("#collegeLoad", { x: lotUnit * -5.5, y: houseY * 2 });
@@ -343,101 +393,18 @@ gsap.set(".draggerBounds", { xPercent: -50 });
   //initialize Flamingone
   $("#flamingoneContainer").load("/assets/flamingone.svg#flamingone", () => {
     let flamingone = document.getElementById("flamingone");
-    // replace this set with a goTo function
-    let road = document.getElementById("road");
-    gsap.set("#flamingone", { y: road.getBBox().y });
+    moveTo(500, 400, 0.8);
+    $(flamingone).click(()=>{leaveHell()})
   });
-};
-
-curtainUp();
-
-//game functions
-//TODO: move to navigation.js or sidescroller.js or something
-getSteps = function (target) {
-  return Array.from(document.getElementById(target).children);
-};
-
-moveToTarget = function (target) {
-  let stepArr = getSteps(target);
-  let flamingone = document.getElementById("flamingone"); // this can be removed once the load order is sorted
-  forEachStep = function () {
-    if (stepArr.length > 0) {
-      let step = stepArr.shift();
-      gsap.to(flamingone, {
-        duration: 3,
-        x: `2900`,
-        // y: `+=${$(step).offset().top - flamingone.offset().top}`,
-        onComplete: forEachStep,
-      });
-    }
-  };
-  forEachStep();
-};
-//above is navigation stuff. shoudl be in its own js file
-
-//yesNo
-// TODO: move to gui js
-function yesNo(message, functionYes, functionNo) {
-  $("#messageP").html(message);
-  $("#messageContainer").dialog({
-    modal: true,
-    buttons: {
-      Yes: function () {
-        functionYes();
-        $(this).dialog("close");
-      },
-      No: function () {
-        functionNo();
-        $(this).dialog("close");
-      },
-    },
-  });
-}
-
-atJob = function () {
-  busy = true;
-};
-
-finishJob = function (wage) {
-  busy = false;
-  money += wage;
-};
-
-jobOffer = function (job) {
-  yesNo(`Would you like to work as ${job.title} for ${job.wages}?`, (job) => {
-    flamingoneJob = job;
-    goToWork(job);
-  });
-};
-
-//TODO: do it yo
-goToWork = function (job) {
-  //go to job target (add to master timeline)
-  //set to busy
-  //timeout til hours
-  //not bust
-  //go home
+  leaveHell = function(){
+    yesNo("Do you want to return to the surface?", ressurect)
+  }
+  //remove once load order sorted
+  setTimeout(() => {
+    initPOIs(poiData);
+    descriptionDialog("The 'Suburban Hellscape' section of the game is incomplete, just click on the flamingone whenever you are finished having a look around")
+  }, 500);
+  curtainUp();
 };
 
 svgContainer.load(`/assets/suburbMap/suburbMap.svg`, go);
-
-////////////////////////////////////////////////////////////////////////this has a timeout
-//this is for testing stuff move its contents to appropriate places
-//FIXME: get rid of time out. move this shit to gui js
-setTimeout(() => {
-  $("#tongueDoorLeft").click(function () {
-    jobOffer(cashier);
-  });
-
-  //move the bird to the door function
-  //just for testing
-  //FIXME: this should not be here
-  $("#tongueDoorRight").click(function () {
-    moveToTarget("gasStationMoveSteps");
-  });
-}, 1000);
-
-//FIXME: i dont remeber what theis "ringFromPath", delete if unused, also from sgvGeneric
-// let test = document.getElementById("tuft1");
-
-// ringFromPath(test);

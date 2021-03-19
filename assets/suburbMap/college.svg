@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="436" viewBox="0 0 900 436">
-  <g id="college" class="college">
+  <g id="college" class="college pointOfInterest">
     <path id="collegeLawn" class="lawn backLawn" d="M 556.00,363.00
            C 893.30,363.00 1200.00,400.00 1200.00,400.00
              1200.00,400.00 1200.00,600.00 1200.00,600.00

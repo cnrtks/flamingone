@@ -1,10 +1,10 @@
-let appleMouthShapes = [
+appleMouthShapes = [
   "#appleMouth25",
   "#appleMouth50",
   "#appleMouth75",
   "#appleMouth100",
 ];
-let poiData = [
+poiData = [
   {
     id: "shingleTrees",
     standX: 550,
@@ -45,6 +45,8 @@ go = function () {
     //cehck item or whatever
     deathByApple();
   });
+
+  curtainUp();
 };
 deathByApple = function () {
   let tl = gsap.timeline({onComplete: die});

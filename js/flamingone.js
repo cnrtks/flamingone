@@ -1,24 +1,69 @@
 var saveFile;
 var svgContainer = $("#svgContainer");
-const curtainTime = 1.5;
+const curtainDur = 1.5;
+const walkDur = 2;
+var deathCount = 0;
 //map data
 let POIs = [];
-
+let poiData = [];
 //stores the currently equipped item;
 var equipped;
 
 //flags
 let isTileDown = false;
 
+class PointOfInterest {
+  constructor(id, standX, standY, ...descriptions) {
+    this.id = id;
+    this.standX = standX;
+    this.standY = standY;
+    this.descriptions = descriptions;
+  }
+}
+
+class Tool {
+  constructor(id, name, path, qty, description) {
+    this.id = id;
+    this.name = name;
+    this.path = path;
+    this.qty = qty;
+    this.description = description;
+  }
+}
+
+//move flamingone to x y coordinates and scales according to y
+moveTo = function (x, y, z) {
+  walk = gsap.timeline();
+  walk.to(flamingone, {
+    duration: walkDur,
+    x: x,
+    y: y,
+    scale: z ?? 0.6 + y / 400,
+  });
+};
+
+movesTo = function (coords) {
+  coords.forEach((c) => moveTo(c[0], c[1], c[2]));
+};
+
 getCssVar = function (value) {
   return window.getComputedStyle(document.body).getPropertyValue(value);
 };
 
-curtainUp = function () {
-  gsap.to("#curtain", { duration: curtainTime, opacity: 0 });
+swapLocalStyle = function (path) {
+  document.getElementById("localStyle").href = path;
 };
-curtainDown = function () {
-  gsap.to("#curtain", { duration: curtainTime, opacity: 1, ease: "power1.in" });
+
+curtainUp = function () {
+  gsap.to("#curtain", { duration: curtainDur, opacity: 0 });
+};
+curtainDown = function (onComplete) {
+  gsap.to("#curtain", {
+    duration: curtainDur,
+    opacity: 1,
+    ease: "power1.in",
+    onComplete: onComplete,
+  });
 };
 
 //functions pretaining to the maps
@@ -63,27 +108,26 @@ $(document).keydown(function (e) {
 });
 
 die = function () {
-  curtainDown();
-  loadMap("suburbMap");
+  deathCount++;
+  curtainDown(loadMap("suburbMap"));
+};
+
+ressurect = function () {
+  loadMap("firstMap");
 };
 
 //load the map
 loadMap = function (map) {
-  curtainDown();
-
-  // include map specific css
-  var link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
-  link.href = `/css/${map}.css`;
-  $("head").append(link);
-
-  //include map specific js
-  $.getScript(`/js/maps/${map}.js`);
+  curtainDown(() => {
+    // include map specific css
+    swapLocalStyle(`/css/${map}.css`);
+    //include map specific js
+    $.getScript(`/js/maps/${map}.js`);
+  });
 };
 
 if (saveFile == null) {
-  // loadMap("firstMap");
+  loadMap("firstMap");
   // loadMap("orchardMap");
-  die();
+  // die();
 }

@@ -18,6 +18,25 @@ displayInventory = function () {
     $("#invnetoryContainer").hide();
 }
 
+//yesNo
+yesNo = function(message, functionYes, functionNo) {
+  $("#messageP").html(message);
+  $("#messageContainer").dialog({
+    closeText: "X",
+    modal: true,
+    buttons: {
+      Yes: function () {
+        functionYes();
+        $(this).dialog("close");
+      },
+      No: function () {
+        functionNo();
+        $(this).dialog("close");
+      },
+    },
+  });
+}
+
 //unused?
 $('.closeButton').click(function (e) {
     $(e.target).parent().hide();
