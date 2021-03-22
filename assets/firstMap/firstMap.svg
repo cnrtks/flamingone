@@ -1132,7 +1132,8 @@
              912.91,478.04 913.22,478.22 913.70,478.43
              914.35,479.09 915.17,479.22 915.65,479.04 Z" />
   </g>
-  <g id="flamingone">
+  <g id="flamingoneLayer" />
+  <!-- <g id="flamingone">
     <path id="torso" class="flamingone" fill="none" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"
       d="M 311.21,560.27
            C 307.10,565.12 301.50,564.00 299.26,558.02
@@ -1194,7 +1195,7 @@
              305.82,399.66 306.40,405.05 305.44,407.94
              304.28,409.87 301.39,410.64 300.43,410.45
              299.47,410.45 296.96,409.29 296.58,404.86 Z" />
-  </g>
+  </g> -->
 
   <defs id="mapDefs">
     <linearGradient id='gradDirt' x1='0%' y1='100%' x2='100%' y2='0%'>

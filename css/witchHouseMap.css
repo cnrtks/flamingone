@@ -1,76 +1,136 @@
 /* gray */
-#houseExtInterior, #houseMainInterior, #doorDaisyStamen {
+#houseExtInterior,
+#houseMainInterior,
+#doorDaisyStamen {
     fill: black;
 }
-#deadPalm{
+
+#deadPalm {
     fill: #333;
 }
+
 #flamingoneEye {
     fill: white;
 }
-#doorKeystoneFace{
+
+#doorKeystoneFace {
     fill: var(--gray);
 }
-#torso, #stonePath, #doorKeystoneEdges {
+
+#torso,
+#stonePath,
+#doorKeystoneEdges {
     fill: var(--grayshade);
 }
+
 /* brown */
-.houseBoard, .doorframe, #volcano, #palmTrunk {
+.houseBoard,
+.doorframe,
+#volcano,
+#palmTrunk {
     fill: var(--brown);
 }
-#palmBelt, #palmTop, #palmCorolla {
+
+#palmBelt,
+#palmTop,
+#palmCorolla {
     fill: var(--brownshade);
 }
+
 .houseFace {
     fill: var(--brownlight);
 }
+
 .windowPane {
     fill: var(--tan);
 }
+
 #plantPot {
     fill: var(--cream);
 }
+
 /* red */
 #doorDasiyPetals {
     fill: var(--red);
 }
+
 /* orange */
 
 /* yellow */
-#houseExtWindowFrame, #doorHoleFrame, #doorKnob, #doorKnobPlate {
+#houseExtWindowFrame,
+#doorHoleFrame,
+#doorKnob,
+#doorKnobPlate {
     fill: var(--gold);
 }
-#stinkFlowerPetalsBack, #stinkFlowerPetalsFront, #palmPistil {
+
+#stinkFlowerPetalsBack,
+#stinkFlowerPetalsFront,
+#palmPistil {
     fill: var(--yellow);
 }
-#stinkFlowerPetalsBottom, #doorDaisyPetals, #palmPistilEdges {
+
+#stinkFlowerPetalsBottom,
+#doorDaisyPetals,
+#palmPistilEdges {
     fill: var(--yellowshade);
 }
+
 /* green */
-#stinkFlowerCorolla, #vine {
+#stinkFlowerCorolla,
+#vine {
     fill: var(--greenshade);
 }
-#stinkFlowerLeafLeft, #stinkFlowerLeafRight{
+
+#stinkFlowerLeafLeft,
+#stinkFlowerLeafRight {
     fill: var(--greenglare)
 }
-#peonyStem, #doorDaisyStem, #dandelionCorolla {
+
+#peonyStem,
+#doorDaisyStem,
+#dandelionCorolla {
     fill: var(--green);
 }
+
 /* blue */
-#grassBack{
+#grassBack {
     fill: var(--bluecedarshade);
 }
-#grassMiddle{
+
+#grassMiddle {
     fill: var(--bluecedar);
 }
-#grassFront{
+
+#grassFront {
     fill: var(--bluecedarglare);
 }
+
 /* pink */
-#beackBottom, #beakTop, #peonyPetalLeft, #peonyPetalRight {
+#beackBottom,
+#beakTop,
+#peonyPetalLeft,
+#peonyPetalRight {
     fill: var(--pink);
 }
+
 #peonyPetalTop {
     fill: var(--pinklight);
 }
+
 /* purple */
+
+
+/* gradients */
+#sunset {
+    fill: url(#gradSunset);
+}
+
+.palmLeaf {
+    fill: url(#gradPalmLeaf)
+}
+
+/* patterns */
+#stars {
+    fill: url(#patStars);
+}

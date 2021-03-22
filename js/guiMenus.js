@@ -2,7 +2,7 @@
 descriptionDialog = function (message) {
     $("#messageImg").hide();
     $("#messageP").html(message);
-    $("#messageContainer").dialog({ closeText: "X" });
+    $("#messageContainer").dialog({ closeText: "X", modal: false, buttons: {} });
 }
 
 itemDialog = function (path, name, message) {

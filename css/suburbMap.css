@@ -283,8 +283,6 @@ background-color: var(--transparent);
 
 /* maelstrom */
 .vortex image {
-    width  : 220%;
-    height : 220%;
     opacity: 0.5;
 }
 

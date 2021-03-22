@@ -425,15 +425,8 @@
     <!-- end of loaded defs -->
   </defs>
   <svg id="layer0" class="layer" viewBox="0 0 1920 1920">
-    <!-- malstrom made with circles and turbulence, too much for browsres to render -->
-    <g id="maelstromVectors">
-      <!-- <circle id="maelstromCloudFront" cx="0" cy="0" r="15%" filter="url(#filterCloud)" fill="black" />
-      <circle id="maelstromCloudBack" cx="0" cy="0" r="30%" filter="url(#filterCloud)" opacity="0.5" fill="purple" />
-      <circle id="maelstromCloudMiddle" cx="0" cy="0" r="20%" filter="url(#filterCloud)" opacity="0.5" fill="#400" /> -->
-    </g>
-    <!-- malstrom crated with external files -->
     <g id="maelstrom" class="maelstrom">
-      <circle id="maelstromHeart" r="300" cx="200" cy="600" fill="url(#rGradMaelstromHeart)" />
+      <circle id="maelstromHeart" r="500" cx="2300" cy="800" fill="url(#rGradMaelstromHeart)" />
       <g id="maelstromVotex" class="vortex">
         <image id="malOutC" href='/assets/suburbMap/malOutC.png' />
         <image id="malOutW" href='/assets/suburbMap/malOutW.png' />
@@ -468,6 +461,6 @@
       <g id="block3" class="block"></g>
       <g id="gasStationLoad" class="lot"></g>
     </g>
-    <g id="flamingoneContainer"></g>
+    <g id="flamingoneLayer"></g>
   </svg>
 </svg>
