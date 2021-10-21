@@ -428,10 +428,10 @@
     <g id="maelstrom" class="maelstrom">
       <circle id="maelstromHeart" r="500" cx="2300" cy="800" fill="url(#rGradMaelstromHeart)" />
       <g id="maelstromVotex" class="vortex">
-        <image id="malOutC" href='/assets/suburbMap/malOutC.png' />
-        <image id="malOutW" href='/assets/suburbMap/malOutW.png' />
-        <image id="malInC" href='/assets/suburbMap/malInC.png' />
-        <image id="malInW" href='/assets/suburbMap/malInW.png' />
+        <image id="malOutC" href='assets/suburbMap/malOutC.png' />
+        <image id="malOutW" href='assets/suburbMap/malOutW.png' />
+        <image id="malInC" href='assets/suburbMap/malInC.png' />
+        <image id="malInW" href='assets/suburbMap/malInW.png' />
       </g>
     </g>
   </svg>

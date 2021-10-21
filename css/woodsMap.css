@@ -1,0 +1,37 @@
+.trunk{
+    fill: var(--browndark);
+}
+
+.foliage{
+    fill: var(--green);
+}
+
+.foliage.pine{
+    fill: var(--bluecedar);
+}
+
+.foliage.maple{
+    fill: var(--orange);
+}
+
+#ground1, #ground2{
+    fill: var(--greenglare);
+    stroke: none;
+}
+
+#ironFence{
+    stroke-width: 7px;
+    stroke: var(--gray);
+}
+
+#svgContainer{
+    background-color: var(--grayglare);
+}
+
+.bone{
+    fill: white;
+}
+
+.details{
+    stroke-width: 5px;
+}

@@ -1,37 +1,70 @@
-var tools = new Array();
+const inventoryContainer = document.getElementById("inventoryContainer");
 
-//import inventoryItems.json for inventories data// this should probably move to file load js or something?
-$.ajax({
-    type: "GET", url: "data/inventoryItems.json",
-    dataType: "json", success: loadInventory,
-    error: function (e) { alert(`${e.status} - ${e.statusText}`) }
-});
+const items = {
+  woodenHoe: {
+    id: "woodenHoe",
+    name: "Wooden Hoe",
+    path: "assets/inventory/tools/woodenHoe.svg",
+    qty: 0, //i forgot if qty's need to be here
+    description: "It's a gardening tool made from wood.",
+  },
+  shingle: {
+    id: "shingle",
+    name: "Shingle",
+    path: "assets/flamingone.svg",
+    qty: 0,
+    description: "This is the fruit of a shingle tree.",
+    plantable: true,
+    plantPaths: ["#plantShingleTrunkStage4"],
+    grow: () => {
+      console.log("morp plant here");
+    },
+  },
+};
 
-// loadInventory into tools array//
-function loadInventory(data) {
-    for (let tool of data.tools) {
-        tools.push(new Tool(tool.id, tool.name, tool.path, tool.qty, tool.description));
-    }
-    populateToolMenu();
-} // end of loadInventory
+getInventory = function () {
+  return JSON.parse(localStorage.getItem("inventory"));
+};
 
-//adds each inventory image to inventory container
-populateToolMenu = function () {
-    $("#toolContainer").html("");
-    $.each($(tools), function (i, value) {
-        if (value.qty > 0)
-            $("#toolContainer").append(createToolImg(value.id, value.path, value.description));
-    });
-}
+setInventory = function (inventory) {
+  localStorage.setItem("inventory", JSON.stringify(inventory));
+  populateInventoryScreen();
+};
+
+populateInventoryScreen = function () {
+  let inv = getInventory();
+  $("#inventoryContainer").html("");
+  inv.forEach((i) => $("#inventoryContainer").append(createItemImg(i)));
+};
 
 //creates <img> strings from tools array
-createToolImg = function (id, path, description) {
-    return `<img id=${id} src=${path} alt="${description}" title="${description}" width="256px" height="256px"/>`
-}
+createItemImg = function (item) {
+  let itemImg = document.createElement("img");
+  itemImg.setAttribute("id", item.id);
+  itemImg.setAttribute("src", item.path);
+  itemImg.setAttribute("alt", item.description);
+  itemImg.setAttribute("title", item.description);
+  itemImg.setAttribute("width", "20%");
+  itemImg.setAttribute("height", "20%");
+  $(itemImg).click(() => {
+    equipThis(item);
+  });
+  return itemImg;
+};
 
-//adds tool to inventory and alerts player via dialog
-youGot = function (tool) {
-    tool.qty++;
-    $("#toolContainer").append(createToolImg(tool.id, tool.path, tool.description));
-    itemDialog(tool.path, tool.name, tool.message);
-}
+//adds item to inventory and alerts player via dialog
+youGot = function (item) {
+  let inv = getInventory();
+  inv.push(item);
+  setInventory(inv);
+  itemDialog(item.path, item.name, item.message);
+};
+
+equipThis = function (item) {
+  equipped = item;
+};
+
+doesInventoryIncludeId = function (id) {
+  let inv = getInventory();
+  return inv.some((el) => el.id === id);
+};

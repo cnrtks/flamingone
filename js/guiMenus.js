@@ -1,25 +1,34 @@
 //descriptionDialog
 descriptionDialog = function (message) {
-    $("#messageImg").hide();
-    $("#messageP").html(message);
-    $("#messageContainer").dialog({ closeText: "X", modal: false, buttons: {} });
-}
+  $("#messageImg").hide();
+  $("#messageP").html(message);
+  $("#messageContainer").dialog({ closeText: "X", modal: false, buttons: {} });
+};
 
 itemDialog = function (path, name, message) {
-    $("#messageImg").attr({
-        src: path,
-        alt: message
-    }).show();
-    $("#messageP").html(`You got ${name}`);
-    $("#messageContainer").dialog({ closeText: "X" });
-}
+  $("#messageImg")
+    .attr({
+      src: path,
+      alt: message,
+    })
+    .show();
+  $("#messageP").html(`You got ${name}`);
+  $("#messageContainer").dialog({
+    closeText: "X",
+    modal: false,
+    buttons: {},
+    close: () => {
+      $("#messageImg").hide();
+    },
+  });
+};
 
 displayInventory = function () {
-    $("#invnetoryContainer").hide();
-}
+  $("#invnetoryContainer").hide();
+};
 
 //yesNo
-yesNo = function(message, functionYes, functionNo) {
+yesNo = function (message, functionYes, functionNo) {
   $("#messageP").html(message);
   $("#messageContainer").dialog({
     closeText: "X",
@@ -35,9 +44,11 @@ yesNo = function(message, functionYes, functionNo) {
       },
     },
   });
-}
+};
 
-//unused?
-$('.closeButton').click(function (e) {
-    $(e.target).parent().hide();
-})
+//TODO: unused?
+$(".closeButton").click(function (e) {
+  //hide img
+  //hide buttons
+  $(e.target).parent().hide();
+});

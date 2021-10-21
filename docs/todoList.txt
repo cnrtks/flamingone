@@ -1,3 +1,20 @@
+implement second text (example: after getting the hoe from rock change its text to say there was something beind the rock)
+
+consistent capitalization of CONST objects and such (eg. items)
+
+FirstMap
+grave dirt to hide bottom of tomb after planted
+
+switch softsoil to plant stage 0
+morph plant stage 0 depending on requirements(automatically by default)
+stages of shingle tree
+if sss === gravedirt & inv does not contain pick axe{ use shingle tree stages array with pick}
+mask pick below soil
+
+
+collect pickaxe from sprout
+pickaxe rock to east
+
 suburbs
 path fixing:
     add house alt paths

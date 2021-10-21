@@ -1,0 +1,11 @@
+.dark, .tilled{
+    filter: brightness(0.618);
+}
+
+.darker{
+    filter: brightness(0.312);
+}
+
+.contrastOutline{
+    filter: url(#contrastOutline);
+}

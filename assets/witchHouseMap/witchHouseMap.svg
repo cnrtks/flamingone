@@ -15,7 +15,7 @@
     </g>
     <g id="witchHousePatterns">
       <pattern id='patStars' x='0' y='0' width='1366' height='768' patternUnits="userSpaceOnUse">
-        <image href="/assets/witchHouseMap/stars.png" x='0' y='0' width='1366' height='768' />
+        <image href="assets/witchHouseMap/stars.png" x='0' y='0' width='1366' height='768' />
       </pattern>
     </g>
   </defs>
@@ -3245,6 +3245,7 @@
              912.87,557.86 911.99,558.53 911.55,558.75
              911.11,558.97 908.68,562.05 908.68,562.05
              908.68,562.05 910.67,562.94 910.67,562.71 Z" />
+             <polyline id="tempFirstMapPath" fill="black" points="0,600 50,700 0,800"/>
   </g>
   <g id="flamingoneLayer" />
   <defs id="mapDefs">

@@ -2,12 +2,17 @@ button:focus {
     outline: none;
 }
 
-#toolContainer{
+#inventoryContainer{
     display: none;
     border: solid green 13px;
     position: absolute;
     width: 80%;
     height: 80%;
+}
+
+#gameMenu{
+    display: none;
+    position: absolute;
 }
 
 #messageImg{
@@ -22,7 +27,6 @@ button:focus {
     display: none;
     padding: 1em;
     background-color: rgba(3, 3, 3, 0.3);
-    text-shadow: 3px 0px 1px #FFF, -3px 0px 1px #FFF, 0px -3px 1px #FFF, 0px 3px 1px #FFF;
 }
 
 #messageContainer, .ui-dialog-titlebar-close {
@@ -38,6 +42,5 @@ button:focus {
     height: 2em;
     padding: 1px;
     border: none;
-
     background-color: #C56;
 }

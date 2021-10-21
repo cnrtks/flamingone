@@ -247,7 +247,7 @@ svg {
     display         : none;
     padding         : 1em;
     background-color: rgba(3, 3, 3, 0.3);
-    text-shadow     : 3px 0px 1px #FFF, -3px 0px 1px #FFF, 0px -3px 1px #FFF, 0px 3px 1px #FFF;
+    /* text-shadow     : 3px 0px 1px #FFF, -3px 0px 1px #FFF, 0px -3px 1px #FFF, 0px 3px 1px #FFF; */
 }
 
 #messageContainer,

@@ -81,3 +81,31 @@ function loadPOIs(data) {
              305.82,399.66 306.40,405.05 305.44,407.94
              304.28,409.87 301.39,410.64 300.43,410.45
              299.47,410.45 296.96,409.29 296.58,404.86 Z" />
+
+
+             //import inventoryItems.json for inventories data// this should probably move to file load js or something?
+$.ajax({
+    type: "GET", url: "data/inventoryItems.json",
+    dataType: "json", success: loadInventory,
+    error: function (e) { alert(`${e.status} - ${e.statusText}`) }
+});
+
+// loadInventory into tools array//
+function loadInventory(data) {
+    for (let tool of data.tools) {
+        tools.push(new Tool(tool.id, tool.name, tool.path, tool.qty, tool.description));
+    }
+    populateToolMenu();
+} // end of loadInventory
+
+//deprecated inventory system were tools and items were seperate and were based on quantities
+//adds each inventory image to inventory container
+// populateToolMenu = function () {
+//   $("#toolContainer").html("");
+//   $.each($(tools), function (i, value) {
+//     if (value.qty > 0)
+//       $("#toolContainer").append(
+//         createToolImg(value.id, value.path, value.description)
+//       );
+//   });
+// };

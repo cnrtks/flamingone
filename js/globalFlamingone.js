@@ -1,37 +1,52 @@
 let saveFile;
 
 const svgContainer = document.getElementById("svgContainer");
-const flamingoneSvg = "/assets/flamingone.svg";
+const flamingoneSvg = "assets/flamingone.svg";
+
+const MAPS = {
+  FirstMap: {},
+  OrcardMap: {},
+  SuburbMap: {},
+  WitchHouse: {},
+  WoodsMap: {},
+};
 
 const CURTAIN_DUR = 1.5;
 const WALK_DUR = 2;
 
-let deathCount = 0;
+let equipped = null;
 
 let currentMap = null;
 let flamingone = null;
 let POIs = [];
 
-//tool functions
 //show description(title) while hovering over menu items
 $(".menu").tooltip();
 
-//display tool inventory
+//display inventory
 $(document).keydown(function (e) {
-  if (e.keyCode == 73) $("#toolContainer").toggle();
+  populateInventoryScreen();
+  if (e.keyCode == 73) $("#inventoryContainer").toggle();
+});
+
+//display game menu
+//TODO: gotta make this menu
+$(document).keydown(function (e) {
+  if (e.keyCode == 77) $("#gameMenu").toggle();
 });
 
 //init maps
 loadMap = function () {
+  let map = localStorage.getItem("currentMap");
   try {
-    swapStyle("localStyle", currentMap.pathCss);
-    $(svgContainer).load(currentMap.pathSvg, currentMap.go);
+    swapStyle("localStyle", MAPS[map].pathCss);
+    $(svgContainer).load(MAPS[map].pathSvg, MAPS[map].go);
   } catch {
     console.log("map is invalid");
   }
 };
 changeMap = function (map) {
-  currentMap = map;
+  localStorage.setItem("currentMap", map);
   loadMap();
 };
 loadFlamingone = function (onComplete) {
@@ -55,6 +70,9 @@ curtainDown = function (onComplete) {
     ease: "power1.in",
     onComplete: onComplete,
   });
+};
+resetLocalStorage = function () {
+  localStorage.clear();
 };
 
 //falmingone navigation
@@ -125,4 +143,10 @@ initPOIs = function (poiData) {
 changeDraggerIcon = function (url) {
   $("#draggerIcon").load(url);
   gsap.set("#draggerIcon", { x: 275, y: 0 });
+};
+
+//getData
+getDeathCount = function () {
+//TODO: check if double counting or ++ on wrong side
+  return parseInt(localStorage.getItem("deathCount"));
 };

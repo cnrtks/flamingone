@@ -182,9 +182,9 @@ goToWork = function (job) {
   //go home
 };
 
-const SuburbMap = {
-  pathSvg: "/assets/suburbMap/suburbMap.svg",
-  pathCss: "/css/suburbMap.css",
+MAPS.SuburbMap = {
+  pathSvg: "assets/suburbMap/suburbMap.svg",
+  pathCss: "css/suburbMap.css",
   poiData: [
     {
       id: "gasStation",
@@ -209,27 +209,27 @@ const SuburbMap = {
   },
   go: () => {
     houseNo = 0;
-    SuburbMap.initElements();
-    SuburbMap.initLoops();
-    SuburbMap.localLoops.play();
+    MAPS.SuburbMap.initElements();
+    MAPS.SuburbMap.initLoops();
+    MAPS.SuburbMap.localLoops.play();
     curtainUp(); //TODO:This needs to wait for the imports before running
   },
   stop: () => {
-    SuburbMap.localLoops.pause();
+    MAPS.SuburbMap.localLoops.pause();
   },
   initElements: () => {
-    initPOIs(SuburbMap.poiData);
+    initPOIs(MAPS.SuburbMap.poiData);
     loadFlamingone(() => {
       $(flamingone).click(() => {
-        SuburbMap.leaveHell();
+        MAPS.SuburbMap.leaveHell();
       });
       moveTo(500, 400, 0.8);
     });
     gsap.set("#maelstromVotex", { scale: 6, y: -500, x: 600 });
-    SuburbMap.initDragger();
-    SuburbMap.generateStainedGlassPattern();
+    MAPS.SuburbMap.initDragger();
+    MAPS.SuburbMap.generateStainedGlassPattern();
     //generate front facing houses
-    $("#houseDefs").load("/assets/suburbMap/house.svg", () => {
+    $("#houseDefs").load("assets/suburbMap/house.svg", () => {
       block0.appendChild(generateHouseBlock(7));
       block1.appendChild(generateHouseBlock(14));
       block2.appendChild(generateHouseBlock(7));
@@ -249,7 +249,7 @@ const SuburbMap = {
     });
     // load and position gas station
     $("#gasStationLoad").load(
-      "/assets/suburbMap/gasStation.svg#gasStation",
+      "assets/suburbMap/gasStation.svg#gasStation",
       () => {
         gsap.set("#gasStationLoad", {
           scale: houseScale / 2,
@@ -267,7 +267,7 @@ const SuburbMap = {
     // secondStreet
     //backhouses
     $("#backHouseDefs").load(
-      "/assets/suburbMap/backHouse.svg#backHouse",
+      "assets/suburbMap/backHouse.svg#backHouse",
       () => {
         secondBlock0.appendChild(generateHouseBlock(6, true));
         secondBlock1.appendChild(generateHouseBlock(25, true));
@@ -279,17 +279,17 @@ const SuburbMap = {
     );
     //university
     $("#universityLoad").load(
-      "/assets/suburbMap/university.svg#university",
+      "assets/suburbMap/university.svg#university",
       () => {
         gsap.set("#universityLoad", { x: lotUnit * -13.5 });
       }
     );
     //college
-    $("#collegeLoad").load("/assets/suburbMap/college.svg#college", () => {
+    $("#collegeLoad").load("assets/suburbMap/college.svg#college", () => {
       gsap.set("#collegeLoad", { x: lotUnit * -5.5, y: houseY * 2 });
     });
     $("#warehouseLoad").load(
-      "/assets/suburbMap/warehouse.svg#warehouse",
+      "assets/suburbMap/warehouse.svg#warehouse",
       () => {
         gsap.set("#warehouseLoad", {
           scale: houseScale,
@@ -298,7 +298,7 @@ const SuburbMap = {
         });
       }
     );
-    $("#officeLoad").load("/assets/suburbMap/office.svg#office", () => {
+    $("#officeLoad").load("assets/suburbMap/office.svg#office", () => {
       gsap.set("#officeLoad", {
         scale: houseScale,
         x: lotUnit * 18,
@@ -310,7 +310,7 @@ const SuburbMap = {
   initLoops: () => {
     let vortecies = $(".vortex").children().get();
     vortecies.forEach((layer, i) => {
-      SuburbMap.localLoops.to(
+      MAPS.SuburbMap.localLoops.to(
         layer,
         {
           duration: 600 / (i + 1),
@@ -383,7 +383,7 @@ const SuburbMap = {
     onDrag((x = 0));
 
     //initialize with cross
-    changeDraggerIcon("/assets/icons/diamondCross.svg");
+    changeDraggerIcon("assets/icons/diamondCross.svg");
 
     //centers dragger
     gsap.set(".draggerBounds", { xPercent: -50 });

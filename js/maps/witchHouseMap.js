@@ -1,6 +1,6 @@
-const WitchHouseMap = {
-  pathSvg: "/assets/witchHouseMap/witchHouseMap.svg",
-  pathCss: "/css/witchHouseMap.css",
+MAPS.WitchHouseMap = {
+  pathSvg: "assets/witchHouseMap/witchHouseMap.svg",
+  pathCss: "css/witchHouseMap.css",
   poiData: [
     {
       id: "houseExtension",
@@ -85,20 +85,22 @@ const WitchHouseMap = {
   ],
   localLoops: gsap.timeline({ paused: true }),
   go: () => {
-    WitchHouseMap.initElements();
-    WitchHouseMap.initLoops();
+    MAPS.WitchHouseMap.initElements();
+    MAPS.WitchHouseMap.initLoops();
+    MAPS.WitchHouseMap.initClicks();
     curtainUp();
   },
   stop: () => {
-    WitchHouseMap.localLoops.pause();
+    MAPS.WitchHouseMap.localLoops.pause();
   },
   initElements: () => {
-    initPOIs(WitchHouseMap.poiData);
-    loadFlamingone();
-    //   gsap.set(flamingone, { x: -150, y: 160 });
+    initPOIs(MAPS.WitchHouseMap.poiData);
+    loadFlamingone(() => {
+      gsap.set(flamingone, { x: -150, y: 160 });
+    });
   },
   initLoops: () => {
-    WitchHouseMap.localLoops.to(
+    MAPS.WitchHouseMap.localLoops.to(
       ".palmLeaf",
       3,
       {
@@ -111,13 +113,17 @@ const WitchHouseMap = {
       },
       "start"
     );
-    WitchHouseMap.localLoops.to(
+    MAPS.WitchHouseMap.localLoops.to(
       ".peony",
       4,
       { x: 6, skewX: -6, repeat: -1, yoyo: true, ease: Power1.easeOut },
       "start"
     );
-    WitchHouseMap.localLoops.play();
+    MAPS.WitchHouseMap.localLoops.play();
+  },
+  initClicks: () => {
+    $("#tempFirstMapPath").click(function () {
+      curtainDown(() => changeMap("FirstMap"));
+    });
   },
 };
-

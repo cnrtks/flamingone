@@ -1,6 +1,6 @@
-const OrchardMap = {
-  pathSvg: "/assets/orchardMap/orchardMap.svg",
-  pathCss: "/css/orchardMap.css",
+MAPS.OrchardMap = {
+  pathSvg: "assets/orchardMap/orchardMap.svg",
+  pathCss: "css/orchardMap.css",
   appleMouthShapes: [
     "#appleMouth25",
     "#appleMouth50",
@@ -30,7 +30,7 @@ const OrchardMap = {
     },
   ],
   initElements: () => {
-    initPOIs(OrchardMap.poiData);
+    initPOIs(MAPS.OrchardMap.poiData);
     loadFlamingone(() => {
       gsap.set("#flamingone", { y: 300, x: -100 });
     });
@@ -53,13 +53,16 @@ const OrchardMap = {
     $("#apple").click(() => {
       //TODO: wait for duck to get there
       //cehck item or whatever
-      OrchardMap.deathByApple();
+      MAPS.OrchardMap.deathByApple();
     });
+    $("#westRoad").click(()=>{
+      curtainDown(() => changeMap("FirstMap"));
+    })
   },
   go: () => {
-    OrchardMap.initElements();
+    MAPS.OrchardMap.initElements();
     // initLoops(); there are no loops on this map yet
-    OrchardMap.initClicks();
+    MAPS.OrchardMap.initClicks();
     curtainUp();
   },
   //functions specific to this maps POIs
@@ -73,7 +76,7 @@ const OrchardMap = {
     while (shapeChangeCount--) {
       tl.to("#appleMouth", {
         duration: 0.12,
-        morphSVG: gsap.utils.random(OrchardMap.appleMouthShapes),
+        morphSVG: gsap.utils.random(MAPS.OrchardMap.appleMouthShapes),
       });
     }
     tl.set("#orchardMap", { attr: { viewBox: "-2000, 0 2000, 1000" } });
@@ -85,7 +88,7 @@ const OrchardMap = {
       tl.to("#appleMouth", {
         duration: 0.18,
         ease: "none",
-        morphSVG: gsap.utils.random(OrchardMap.appleMouthShapes),
+        morphSVG: gsap.utils.random(MAPS.OrchardMap.appleMouthShapes),
       });
     }
     tl.to(
